@@ -49,7 +49,7 @@ const Layout = ({ children, dark }) => {
         {children}
         <CopyRight brandName={siteInfo && siteInfo.brandName} />
         <Cursor />
-        <Progressbar />
+        <Progressbar /> 
       </div>
     </Fragment>
   );

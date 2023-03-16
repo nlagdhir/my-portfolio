@@ -573,15 +573,7 @@ h6 {
   width: auto;
 }
 .dizme_tm_button {
-  width: 100%;
-  height: auto;
-  clear: both;
-  float: left;
-}
-.dizme_tm_button a {
-  text-decoration: none;
   color: #fff;
-  display: inline-block;
   font-family: "Jost", sans-serif;
   font-weight: 500;
   border-radius: 50px;
@@ -589,38 +581,13 @@ h6 {
   padding: 14px 48px 13px 48px;
   position: relative;
   overflow: hidden;
-}
-.dizme_tm_button span {
-  position: relative;
-  z-index: 2;
-
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-.dizme_tm_button a:before {
-  position: absolute;
-  content: "";
-  z-index: 0;
   background-color: #f75023;
-  left: -5px;
-  right: -5px;
-  bottom: -5px;
-  height: 110%;
+}
 
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-.dizme_tm_button a:hover:before {
-  height: 0;
-}
-.dizme_tm_button a:hover span {
+.dizme_tm_button:hover{
+  background-color: #fff;
   color: #000;
+  transition: all 0.3s ease;
 }
 .dizme_tm_hero .social {
   padding-left: 27px;
@@ -2482,7 +2449,6 @@ input[type="number"] {
 .dizme_tm_contact .empty_notice {
   color: #f52225;
   margin-bottom: 7px;
-  display: none;
   text-align: left;
   font-weight: 500;
 }

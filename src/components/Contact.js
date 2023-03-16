@@ -1,10 +1,150 @@
 import { useEffect, useState } from "react";
 import { fatchData } from "../utilits";
+
 const Contact = () => {
   const [data, setData] = useState({});
+  const [formInput, setFormInput] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: "",
+  });
+
+  const [errors, setErrors] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: "",
+    server_error: "",
+  });
+
+  const [successMessage, setSuccessMessage] = useState("");
+
   useEffect(async () => {
     setData(await fatchData("/static/info.json"));
   }, []);
+
+  const handleInputChange = (event) => {
+    setErrors((prev) => ({
+      ...prev,
+      [event.target.name]: "",
+      ["server_error"]: "",
+    }));
+
+    setFormInput({ ...formInput, [event.target.name]: event.target.value });
+    console.log(formInput);
+  };
+
+  const sendContactData = async (formInput) => {
+    const response = await fetch("/api/contact", {
+      method: "POST",
+      body: JSON.stringify(formInput),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    const data = await response.json();
+
+    if (!response.ok) {
+      throw new Error(data.message || "Something went wront!");
+    }
+
+    return data;
+  };
+
+  const handleFormSubmit = async (event) => {
+    event.preventDefault();
+    console.log("form submitted!");
+
+    setErrors({
+      name: "",
+      email: "",
+      phone: "",
+      subject: "",
+      message: "",
+      server_error: "",
+    });
+
+    setSuccessMessage('');
+
+    // client side validation
+
+    let check = false;
+    if (formInput.name.length <= 0) {
+      check = true;
+      setErrors((prev) => ({
+        ...prev,
+        ["name"]: "Name should not be empty!",
+      }));
+    }
+
+    if (!isValidEmail(formInput.email)) {
+      check = true;
+      setErrors((prev) => ({
+        ...prev,
+        ["email"]: "Invalid email address",
+      }));
+    }
+    if (formInput.subject.length <= 0) {
+      check = true;
+      setErrors((prev) => ({
+        ...prev,
+        ["subject"]: "Subject should not be empty!",
+      }));
+    }
+
+    if (formInput.phone < 8) {
+      check = true;
+      setErrors((prev) => ({
+        ...prev,
+        ["phone"]: "Invalid Phone",
+      }));
+    }
+
+    if (formInput.message.length < 20) {
+      check = true;
+      setErrors((prev) => ({
+        ...prev,
+        ["message"]: "Invalid Message, Type something more!",
+      }));
+    }
+
+    if (check) return false;
+
+    try {
+      const data = await sendContactData(formInput);
+      setFormInput({
+        name: "",
+        phone: "",
+        subject: "",
+        email: "",
+        message: "",
+      });
+
+      if (data.status) {
+        setSuccessMessage(data.message);
+      } else {
+        setErrors((prev) => ({
+          ...prev,
+          ["server_error"]: data.message,
+        }));
+      }
+    } catch (error) {
+      setErrors((prev) => ({
+        ...prev,
+        ["server_error"]: error.message,
+      }));
+    }
+  };
+
+  const isValidEmail = (email) => {
+    // Check if email is in a valid format
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  };
+
   return (
     <div className="dizme_tm_section" id="contact">
       <div className="dizme_tm_contact">
@@ -62,40 +202,68 @@ const Contact = () => {
             <div className="right wow fadeInRight" data-wow-duration="1s">
               <div className="fields">
                 <form
-                  action="/"
-                  method="post"
                   className="contact_form"
                   id="contact_form"
                   autoComplete="off"
+                  onSubmit={handleFormSubmit}
                 >
-                  <div
-                    className="returnmessage"
-                    data-success="Your message has been received, We will contact you soon."
-                  />
-                  <div className="empty_notice">
-                    <span>Please Fill Required Fields</span>
-                  </div>
+                  {successMessage && (
+                    <div className="returnmessage">
+                      <p>{successMessage}</p>
+                    </div>
+                  )}
+
+                  {errors.server_error && (
+                    <div className="empty_notice">
+                      <span>{errors.server_error}</span>
+                    </div>
+                  )}
+
                   <div className="input_list">
                     <ul>
                       <li>
-                        <input id="name" type="text" placeholder="Your Name" />
+                        <input
+                          id="name"
+                          type="text"
+                          placeholder="Your Name"
+                          name="name"
+                          value={formInput.name}
+                          onChange={handleInputChange}
+                        />
+                        <p className="contact_error">{errors.name}</p>
                       </li>
                       <li>
                         <input
                           id="email"
                           type="text"
                           placeholder="Your Email"
+                          name="email"
+                          value={formInput.email}
+                          onChange={handleInputChange}
                         />
+                        <p className="contact_error">{errors.email}</p>
                       </li>
                       <li>
                         <input
                           id="phone"
                           type="number"
                           placeholder="Your Phone"
+                          name="phone"
+                          value={formInput.phone}
+                          onChange={handleInputChange}
                         />
+                        <p className="contact_error">{errors.phone}</p>
                       </li>
                       <li>
-                        <input id="subject" type="text" placeholder="Subject" />
+                        <input
+                          id="subject"
+                          type="text"
+                          placeholder="Subject"
+                          name="subject"
+                          value={formInput.subject}
+                          onChange={handleInputChange}
+                        />
+                        <p className="contact_error">{errors.subject}</p>
                       </li>
                     </ul>
                   </div>
@@ -103,14 +271,19 @@ const Contact = () => {
                     <textarea
                       id="message"
                       placeholder="Write your message here"
-                      defaultValue={""}
+                      name="message"
+                      value={formInput.message}
+                      onChange={handleInputChange}
                     />
+                    <p className="contact_error">{errors.message}</p>
                   </div>
-                  <div className="dizme_tm_button">
-                    <a id="send_message" href="#">
-                      <span>Submit Now</span>
-                    </a>
-                  </div>
+                  <button
+                    type="submit"
+                    className="dizme_tm_button"
+                    id="send_message"
+                  >
+                    Send Message
+                  </button>
                 </form>
               </div>
             </div>
