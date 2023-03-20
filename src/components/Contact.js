@@ -57,8 +57,7 @@ const Contact = () => {
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-    console.log("form submitted!");
-
+    
     setErrors({
       name: "",
       email: "",
@@ -106,13 +105,13 @@ const Contact = () => {
 
     if (formInput.message.length < 20) {
       check = true;
-      setErrors((prev) => ({
+      setErrors((prev) => ({ 
         ...prev,
         ["message"]: "Invalid Message, Type something more!",
       }));
     }
 
-    if (check) return false;
+    if (check) return false
 
     try {
       const data = await sendContactData(formInput);
