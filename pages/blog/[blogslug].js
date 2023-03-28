@@ -23,10 +23,10 @@ function blogDetails() {
           <div className="description_wrap">
             <div className="news_popup_informations">
               <div className="image">
-                <img style={{borderRadius: "15px"}} src={data && data.img && data.img} alt="image" />
+                <img style={{borderRadius: "15px"}} src={data && data.img && data.img} alt="" />
               </div>
               <div className="details">
-                <h3>{data && data.title ? data?.title : "Title"}</h3>
+                <h3>{data && data.title}</h3>
                 <span>
                   <h6 style={{paddingTop:"15px",paddingBottom:"8px", color:'#f86a44'}}>{data && data.category}</h6>
                 </span>

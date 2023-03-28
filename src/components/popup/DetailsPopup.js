@@ -1,3 +1,5 @@
+import ReactMarkdown from "react-markdown";
+
 const DetailsPopup = ({ open, close, data }) => {
   return (
     <div className={`dizme_tm_modalbox ${open ? "opened" : ""}`}>
@@ -26,7 +28,9 @@ const DetailsPopup = ({ open, close, data }) => {
             </div>
             <div className="main_details">
               <div style={{ textAlign: "justify" }} className="textbox">
-                <p>{data && data.details}</p>
+              {data && data.details && data.details.map(para=>
+                <p key={para.id}>{para.text}</p>
+                ) }
                 <div className="demo_button">
                   <a href={data && data.demo} target="_blank">
                     View Project

@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { blogData } from './../../public/static/blog';
 
 const News = () => {
@@ -16,7 +17,7 @@ const News = () => {
               {data &&
                 data.map((blog, i) => (
                   <li className="wow fadeInUp" data-wow-duration="1s" key={i}>
-                    <a href={`blog/${blog.slug}`}>
+                    <Link href={`blog/${blog.slug}`}>
                     <div  className="list_inner">
                     <a>
                     <div className="image">
@@ -46,7 +47,7 @@ const News = () => {
                         </div>
                     </a>
                     </div>
-                    </a>
+                    </Link>
                   
                   </li>
                 ))}
