@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "name": "Advice Generator",
+        "img": "img/portfolio/advice.png",
+        "category": "Tailwind",
+        "date": {
+            "date": "2",
+            "month": "March"
+        },
+        "client": "Alvaro Morata",
+        "details": ["An advice generator per click app built with React is a web application that generates a piece of advice for the user every time they click a button. The app is built using React, a JavaScript library for building user interfaces, and an advice API, which provides the advice text.",
+        " The app would have a simple interface with a button that says Get Advice When the user clicks the button, the app would make a request to the advice API and display the advice text on the screen. The app could also have additional features, such as the ability to share the advice on social media or save it to a favorites list."]
+        ,
+        "demo": "https://advice-generator-three-rho.vercel.app/"
+    },
+    {
+        "id": 2,
+        "name": "Movie Buzz",
+        "img": "img/portfolio/movie2.png",
+        "category": "API",
+        "date": {
+            "date": "10",
+            "month": "March"
+        },
+        "client": "Jhon Decap",
+        "details": "A movie app built with React is a web-based application that enables users to browse and search for movies, view movie details, and save their favorite movies.React is a popular front-end JavaScript library for building user interfaces, and it's an excellent choice for building a movie app because of its component-based architecture and ability to manage complex state changes. '\n' Planning with app's functionality and design  Before starting the development process, it's essential to plan out the app's features and design. This includes deciding on the user interface components, such as the homepage, search bar, movie cards, and movie details page '\n' As mentioned earlier, I need to choose a movie API to fetch movie data. The app needs to fetch data from the movie API and display it to the user. This step includes making HTTP requests to the API and parsing the JSON data. \n Use Package : Tailwind css, daisy ui, Axios, React Router, AOS, React Icons, React Alice Carousel",
+        "demo": "https://movie-buzz-silk.vercel.app/"
+    },
+    {
+        "id": 3,
+        "name": "Github Gallary",
+        "img": "img/portfolio/github.png",
+        "category": "API",
+        "date": {
+            "date": "5",
+            "month": "March"
+        },
+        "client": "JP Morgan",
+        "details": "A GitHub repository gallery built with React and the GitHub API is a web application that displays a collection of GitHub repositories and their information. The app is built using React, a JavaScript library for building user interfaces, and the GitHub API, which provides access to GitHub repositories and their metadata. \n The app would have a simple interface with a search bar where the user can enter a GitHub username. When the user submits the username, the app would make a request to the GitHub API to retrieve the user's repositories and their metadata. The app would then display the repositories in a gallery format, with each repository represented by a card containing its name, description, and other relevant information. \n To build the app, the developer would use React to create the user interface and handle user interactions, such as the search bar input and the repository card display. They would also integrate the GitHub API, which would provide the repository data for the app. The developer would use React's component architecture to create reusable components for the app, such as the search bar and the repository card. \n Use Package : Tailwind css, Daisy ui",
+        "demo": "https://github-api-dev220791-gmailcom.vercel.app/"
+    },
+    {
+        "id": 4,
+        "name": "Sticky Note",
+        "img": "img/portfolio/sticky.png",
+        "category": "React",
+        "date": {
+            "date": "12",
+            "month": "March"
+        },
+        "client": "Hindol Deco",
+        "details": "A sticky note app built with React and local storage is a web application that allows users to create and save virtual sticky notes on their computer. The app is built using React, a JavaScript library for building user interfaces, and local storage, which allows data to be stored locally in the user's browser.\nThe app would have a simple interface with a text box where the user can enter the text for their sticky note, and a button to save the note. When the user saves a note, it would be stored in local storage and displayed on the screen as a virtual sticky note. The user can then move the sticky note around on the screen, edit the text, or delete it. \nTo build the app, the developer would use React to create the user interface and handle user interactions, such as saving, editing, and deleting notes. They would also use local storage to store the note data in the user's browser, allowing the notes to persist even if the user closes the app or refreshes the page. \n Use Package : Tailwind css, Daisy ui",
+        "demo": "https://sticky-notes-indol.vercel.app/"
+    }
+]

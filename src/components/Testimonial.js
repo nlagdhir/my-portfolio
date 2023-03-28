@@ -83,25 +83,25 @@ const Testimonial = () => {
               <div
                 className="det_image one wow fadeIn"
                 data-wow-duration="1s"
-                data-img-url="img/testimonials/2.jpg"
+                data-img-url="img/testimonials/boss1.png"
               />
               <div
                 className="det_image two wow fadeIn"
                 data-wow-duration="1s"
                 data-wow-delay="0.2s"
-                data-img-url="img/testimonials/1.jpg"
+                data-img-url="img/testimonials/boss2.png"
               />
               <div
                 className="det_image three wow fadeIn"
                 data-wow-duration="1s"
                 data-wow-delay="0.4s"
-                data-img-url="img/testimonials/3.jpg"
+                data-img-url="img/testimonials/boss3.png"
               />
               <div
                 className="det_image four wow fadeIn"
                 data-wow-duration="1s"
                 data-wow-delay="0.6s"
-                data-img-url="img/testimonials/4.jpg"
+                data-img-url="img/testimonials/boss4.png"
               />
               <span className="circle green animPulse" />
               <span className="circle yellow animPulse" />
@@ -111,19 +111,19 @@ const Testimonial = () => {
               <div
                 className="det_image one wow fadeIn"
                 data-wow-duration="1s"
-                data-img-url="img/testimonials/5.jpg"
+                data-img-url="img/testimonials/boss5.png"
               />
               <div
                 className="det_image two wow fadeIn"
                 data-wow-duration="1s"
                 data-wow-delay="0.2s"
-                data-img-url="img/testimonials/6.jpg"
+                data-img-url="img/testimonials/boss6.png"
               />
               <div
                 className="det_image three wow fadeIn"
                 data-wow-duration="1s"
                 data-wow-delay="0.4s"
-                data-img-url="img/testimonials/7.jpg"
+                data-img-url="img/testimonials/boss7.png"
               />
               <span className="circle yellow animPulse" />
               <span className="circle purple animPulse" />

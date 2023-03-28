@@ -1,0 +1,31 @@
+{
+   
+    "skills": [
+      {
+        "name": "PHP",
+        "color": "rgb(247, 80, 35)",
+        "value": 80
+      },
+      {
+        "name": "WORDPRESS ",
+        "color": "rgb(28, 190, 89)",
+        "value": 85
+      },
+      {
+        "name": "LARAVEL ",
+        "color": "rgb(128, 103, 240)",
+        "value": 90
+      },
+      {
+        "name": "JAVASCRIPT ",
+        "color": "rgba(0, 224, 255, 0.8)",
+        "value": 95
+      },
+      {
+        "name": "MAGENTO 2",
+        "color": "rgba(245, 0, 255, 0.8)",
+        "value": 80 
+      }
+    ]
+  }
+  

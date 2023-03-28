@@ -3,6 +3,7 @@ import { fatchData } from "../utilits";
 
 const Contact = () => {
   const [data, setData] = useState({});
+  const [loading, setLoading] = useState(false);
   const [formInput, setFormInput] = useState({
     name: "",
     email: "",
@@ -34,7 +35,6 @@ const Contact = () => {
     }));
 
     setFormInput({ ...formInput, [event.target.name]: event.target.value });
-    console.log(formInput);
   };
 
   const sendContactData = async (formInput) => {
@@ -57,7 +57,7 @@ const Contact = () => {
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-    
+
     setErrors({
       name: "",
       email: "",
@@ -67,54 +67,58 @@ const Contact = () => {
       server_error: "",
     });
 
-    setSuccessMessage('');
-
+    setSuccessMessage("");
+    setLoading(true);
     // client side validation
 
-    let check = false;
-    if (formInput.name.length <= 0) {
-      check = true;
-      setErrors((prev) => ({
-        ...prev,
-        ["name"]: "Name should not be empty!",
-      }));
-    }
+    // let check = false;
+    // if (formInput.name.length <= 0) {
+    //   check = true;
+    //   setErrors((prev) => ({
+    //     ...prev,
+    //     ["name"]: "Name should not be empty!",
+    //   }));
+    // }
 
-    if (!isValidEmail(formInput.email)) {
-      check = true;
-      setErrors((prev) => ({
-        ...prev,
-        ["email"]: "Invalid email address",
-      }));
-    }
-    if (formInput.subject.length <= 0) {
-      check = true;
-      setErrors((prev) => ({
-        ...prev,
-        ["subject"]: "Subject should not be empty!",
-      }));
-    }
+    // if (!isValidEmail(formInput.email)) {
+    //   check = true;
+    //   setErrors((prev) => ({
+    //     ...prev,
+    //     ["email"]: "Invalid email address",
+    //   }));
+    // }
+    // if (formInput.subject.length <= 0) {
+    //   check = true;
+    //   setErrors((prev) => ({
+    //     ...prev,
+    //     ["subject"]: "Subject should not be empty!",
+    //   }));
+    // }
 
-    if (formInput.phone < 8) {
-      check = true;
-      setErrors((prev) => ({
-        ...prev,
-        ["phone"]: "Invalid Phone",
-      }));
-    }
+    // if (formInput.phone < 8) {
+    //   check = true;
+    //   setErrors((prev) => ({
+    //     ...prev,
+    //     ["phone"]: "Invalid Phone",
+    //   }));
+    // }
 
-    if (formInput.message.length < 20) {
-      check = true;
-      setErrors((prev) => ({ 
-        ...prev,
-        ["message"]: "Invalid Message, Type something more!",
-      }));
-    }
+    // if (formInput.message.length < 20) {
+    //   check = true;
+    //   setErrors((prev) => ({
+    //     ...prev,
+    //     ["message"]: "Invalid Message, Type something more!",
+    //   }));
+    // }
 
-    if (check) return false
+    // if (check) return false;
 
     try {
       const data = await sendContactData(formInput);
+
+      console.log(data);
+      console.log("errors");
+
       setFormInput({
         name: "",
         phone: "",
@@ -122,27 +126,39 @@ const Contact = () => {
         email: "",
         message: "",
       });
+      setLoading(false);
 
+      console.log(data);
+      // setErrors(data);
       if (data.status) {
         setSuccessMessage(data.message);
       } else {
-        setErrors((prev) => ({
-          ...prev,
-          ["server_error"]: data.message,
-        }));
+        if (data.errors) {
+          setErrors(data.errors);
+          console.log(errors);
+        } else {
+          setErrors((prev) => ({
+            ...prev,
+            ["server_error"]: data.message,
+          }));
+        }
       }
     } catch (error) {
-      setErrors((prev) => ({
-        ...prev,
-        ["server_error"]: error.message,
-      }));
+      console.log("errors");
+      // console.log("error",error)
+
+      // setErrors(error)
+      // setErrors((prev) => ({
+      //   ...prev,
+      //   ["server_error"]: error.message,
+      // }));
+      setLoading(false);
     }
   };
-
-  const isValidEmail = (email) => {
-    // Check if email is in a valid format
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-  };
+  // const isValidEmail = (email) => {
+  //   // Check if email is in a valid format
+  //   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  // };
 
   return (
     <div className="dizme_tm_section" id="contact">
@@ -206,17 +222,9 @@ const Contact = () => {
                   autoComplete="off"
                   onSubmit={handleFormSubmit}
                 >
-                  {successMessage && (
-                    <div className="returnmessage">
-                      <p>{successMessage}</p>
-                    </div>
-                  )}
+                  
 
-                  {errors.server_error && (
-                    <div className="empty_notice">
-                      <span>{errors.server_error}</span>
-                    </div>
-                  )}
+                 
 
                   <div className="input_list">
                     <ul>
@@ -229,6 +237,7 @@ const Contact = () => {
                           value={formInput.name}
                           onChange={handleInputChange}
                         />
+
                         <p className="contact_error">{errors.name}</p>
                       </li>
                       <li>
@@ -240,6 +249,7 @@ const Contact = () => {
                           value={formInput.email}
                           onChange={handleInputChange}
                         />
+
                         <p className="contact_error">{errors.email}</p>
                       </li>
                       <li>
@@ -251,6 +261,7 @@ const Contact = () => {
                           value={formInput.phone}
                           onChange={handleInputChange}
                         />
+
                         <p className="contact_error">{errors.phone}</p>
                       </li>
                       <li>
@@ -262,6 +273,7 @@ const Contact = () => {
                           value={formInput.subject}
                           onChange={handleInputChange}
                         />
+
                         <p className="contact_error">{errors.subject}</p>
                       </li>
                     </ul>
@@ -274,15 +286,22 @@ const Contact = () => {
                       value={formInput.message}
                       onChange={handleInputChange}
                     />
+
                     <p className="contact_error">{errors.message}</p>
                   </div>
                   <button
+                    disabled={loading}
                     type="submit"
                     className="dizme_tm_button"
                     id="send_message"
                   >
-                    Send Message
+                    {loading ? "Loading..." : "Send Message"}
                   </button>
+                  {successMessage && (
+                    <div className="returnmessage">
+                      <p>{successMessage}</p>
+                    </div>
+                  )}
                 </form>
               </div>
             </div>

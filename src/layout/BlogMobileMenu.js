@@ -1,5 +1,5 @@
 import { useState } from "react";
-const MobileMenu = ({ logo }) => {
+const MobileMenu = () => {
   const [toggle, setToggle] = useState(false);
   return (
     <div className="dizme_tm_mobile_menu">
@@ -7,7 +7,7 @@ const MobileMenu = ({ logo }) => {
         <div className="mobile_in">
           <div className="logo">
             <a href="/">
-              <img src={!logo ? logo : "img/logo/logo-nl.png"} alt="image" />
+              <img src="https://i.ibb.co/S6L1v1t/logo-nl.png" alt="image" />
             </a>
           </div>
           <div className="trigger">
@@ -33,33 +33,33 @@ const MobileMenu = ({ logo }) => {
               </a>
             </li>
             <li>
-              <a onClick={() => setToggle(false)} href="#about">
+              <a onClick={() => setToggle(false)} href="/#about">
                 About
               </a>
             </li>
             <li>
-              <a onClick={() => setToggle(false)} href="#portfolio">
+              <a onClick={() => setToggle(false)} href="/#portfolio">
                 Portfolio
               </a>
             </li>
             <li>
-              <a onClick={() => setToggle(false)} href="#service">
+              <a onClick={() => setToggle(false)} href="/#service">
                 Service
               </a>
             </li>
             <li>
-              <a onClick={() => setToggle(false)} href="#blog">
+              <a onClick={() => setToggle(false)} href="/blog">
                 Blog
               </a>
             </li>
             <li>
-              <a onClick={() => setToggle(false)} href="#contact">
+              <a onClick={() => setToggle(false)} href="/#contact">
                 Contact
               </a>
             </li>
             <li className="download_cv">
-              <a href="https://nlagdhir.in/images/Nilesh_Lagdhir_CV.pdf"
-                  target="_blank" >
+              <a  href="https://nlagdhir.in/images/Nilesh_Lagdhir_CV.pdf"
+                  target="_blank">
                 <span>Download CV</span>
               </a>
             </li>

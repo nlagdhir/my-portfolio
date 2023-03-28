@@ -4,7 +4,7 @@ import { activeSkillProgress, fatchData } from "../utilits";
 const Skills = ({ dark }) => {
   const [data, setData] = useState({});
   useEffect(async () => {
-    setData(await fatchData("/static/info.json"));
+    setData(await fatchData("/static/skill.json"));
   }, []);
   useEffect(() => {
     window.addEventListener("scroll", activeSkillProgress);
@@ -21,10 +21,10 @@ const Skills = ({ dark }) => {
                 data-wow-duration="1s"
                 data-align="left"
               >
-                <span>Design is Life</span>
+                <span>Programming is Life</span>
                 <h3>I Develop Skills Regularly to Keep Me Update</h3>
                 <p>
-                  Most common methods for designing websites that work well on
+                  Most common methods for developing websites that work well on
                   desktop is responsive and adaptive design
                 </p>
               </div>

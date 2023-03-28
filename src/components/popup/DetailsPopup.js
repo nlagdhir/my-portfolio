@@ -1,4 +1,4 @@
-const DetailsPopup = ({ open, close }) => {
+const DetailsPopup = ({ open, close, data }) => {
   return (
     <div className={`dizme_tm_modalbox ${open ? "opened" : ""}`}>
       <div className="box_inner">
@@ -10,99 +10,50 @@ const DetailsPopup = ({ open, close }) => {
         <div className="description_wrap">
           <div className="popup_details">
             <div className="top_image">
-              <img src="img/thumbs/4-2.jpg" alt="image" />
+              <img src={data && data.img} alt="image" />
               <div
                 className="main"
-                data-img-url="img/portfolio/6.jpg"
-                style={{ backgroundImage: 'url("img/portfolio/6.jpg")' }}
+                data-img-url={data && data.img}
+                style={{ backgroundImage: `url(${data && data.img})` }}
               />
             </div>
             <div className="portfolio_main_title">
-              <h3>Global Evolution</h3>
+              <h3>{data && data.name}</h3>
               <span>
-                <a href="#">Detail</a>
+                <a style={{color:'#f75023'}} href="#">{data && data.category}</a>
               </span>
               <div />
             </div>
             <div className="main_details">
-              <div className="textbox">
-                <p>
-                  We live in a world where we need to move quickly and iterate
-                  on our ideas as flexibly as possible.
-                </p>
-                <p>
-                  {`Mockups are useful both for the creative phase of the project
-                  - for instance when you're trying to figure out your user
-                  flows or the proper visual hierarchy - and the production
-                  phase when they phase when they will represent the target
-                  product. Building mockups strikes the ideal balance ease of
-                  modification.`}
-                </p>
+              <div style={{ textAlign: "justify" }} className="textbox">
+                <p>{data && data.details}</p>
+                <div className="demo_button">
+                  <a href={data && data.demo} target="_blank">
+                    View Project
+                  </a>
+                </div>
               </div>
               <div className="detailbox">
                 <ul>
                   <li>
                     <span className="first">Client</span>
-                    <span>Alvaro Morata</span>
+                    <span>{data && data.client}</span>
                   </li>
                   <li>
                     <span className="first">Category</span>
                     <span>
-                      <a href="#">Detail</a>
+                      <a href="#">{data && data.category}</a>
                     </span>
                   </li>
                   <li>
                     <span className="first">Date</span>
-                    <span>March 07, 2021</span>
+                    <span>
+                      {data && data.date && data.date.date}{" "}
+                      {data && data.date && data.date.month}
+                    </span>
                   </li>
                 </ul>
               </div>
-            </div>
-            <div className="additional_images">
-              <ul>
-                <li>
-                  <div className="list_inner">
-                    <div className="my_image">
-                      <img src="img/thumbs/4-2.jpg" alt="image" />
-                      <div
-                        className="main"
-                        data-img-url="img/portfolio/1.jpg"
-                        style={{
-                          backgroundImage: 'url("img/portfolio/1.jpg")',
-                        }}
-                      />
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div className="list_inner">
-                    <div className="my_image">
-                      <img src="img/thumbs/4-2.jpg" alt="image" />
-                      <div
-                        className="main"
-                        data-img-url="img/portfolio/2.jpg"
-                        style={{
-                          backgroundImage: 'url("img/portfolio/2.jpg")',
-                        }}
-                      />
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div className="list_inner">
-                    <div className="my_image">
-                      <img src="img/thumbs/4-2.jpg" alt="image" />
-                      <div
-                        className="main"
-                        data-img-url="img/portfolio/3.jpg"
-                        style={{
-                          backgroundImage: 'url("img/portfolio/3.jpg")',
-                        }}
-                      />
-                    </div>
-                  </div>
-                </li>
-              </ul>
             </div>
           </div>
         </div>

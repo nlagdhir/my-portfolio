@@ -1,13 +1,11 @@
-const Header = ({ logo }) => {
+const Header = () => {
   return (
     <div className="dizme_tm_header">
       <div className="container">
         <div className="inner">
           <div className="logo">
-            <a href="#">
-              {logo && (
-                <img src={logo ? logo : "img/logo/logo.png"} alt="image" />
-              )}
+            <a href="/">
+            <img style={{width:""}} src={"img/logo/logo-nl.png"} alt="logo" />
             </a>
           </div>
           <div className="menu">
@@ -25,13 +23,17 @@ const Header = ({ logo }) => {
                 <a href="#service">Service</a>
               </li>
               <li>
-                <a href="#blog">Blog</a>
+                <a href="/blog">Blog</a>
               </li>
               <li>
                 <a href="#contact">Contact</a>
               </li>
               <li className="download_cv">
-                <a href="img/cv/1.jpg" download="">
+                <a
+                  href="https://nlagdhir.in/images/Nilesh_Lagdhir_CV.pdf"
+                  target="_blank"
+                
+                >
                   <span>Download CV</span>
                 </a>
               </li>

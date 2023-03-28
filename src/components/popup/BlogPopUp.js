@@ -1,4 +1,5 @@
 const BlogPopUp = ({ data, open, close }) => {
+  window.scroll(0, 0);
   return (
     <div className={`dizme_tm_modalbox ${open ? "opened" : ""}`}>
       {data && (

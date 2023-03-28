@@ -7,7 +7,6 @@ const Home = ({ dark }) => {
   useEffect(async () => {
     setData(await fatchData("/static/info.json"));
   }, []);
-
   return (
     <div className="dizme_tm_section" id="home">
       <div className="dizme_tm_hero">
@@ -46,7 +45,7 @@ const Home = ({ dark }) => {
                       data.social &&
                       data.social.map((social, i) => (
                         <li key={i}>
-                          <a href="#">
+                          <a href={social?.url}>
                             <i className={social.icon} />
                           </a>
                         </li>
@@ -73,7 +72,7 @@ const Home = ({ dark }) => {
                           {parse(skill.icon)}
                         </span>
                       )
-                  )}
+                  ).slice(0,3)}
               </div>
             </div>
           </div>
