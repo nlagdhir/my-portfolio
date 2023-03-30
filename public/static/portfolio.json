@@ -70,5 +70,23 @@
             {"id":4,"text":"Use Package : Tailwind css, Daisy ui"}
         ],
         "demo": "https://sticky-notes-indol.vercel.app/"
+    },
+    {
+        "id": 5,
+        "name": "Dictionary",
+        "img": "img/portfolio/dictionary.png",
+        "category": "React",
+        "date": {
+            "date": "12",
+            "month": "March"
+        },
+        "client": "AKH Fider",
+        "details":[
+            {"id":1,"text":"A dictionary app built with React and TailwindCSS, and utilizing an API, would be a modern and user-friendly tool for looking up definitions, synonyms, and antonyms related information."},
+            {"id":2,"text":"The app would have a clean and minimalist design, with a search bar at the top and a results section below. Users would be able to enter a word or phrase they would like to look up, and the app would return the relevant definitions and other information in a concise and easy-to-read format."},
+            {"id":3,"text":"TailwindCSS would be used to style the app, making it responsive and visually appealing across different devices and screen sizes. The framework's utility-first approach would allow for quick and efficient styling changes without the need for custom CSS."},
+            {"id":4,"text":"Use Package : Tailwind css, React"}
+        ],
+        "demo": "https://dictionary-chi.vercel.app/"
     }
 ]

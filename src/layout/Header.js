@@ -7,7 +7,11 @@ const Header = () => {
         <div className="inner">
           <div className="logo">
             <a href="/">
-            <img style={{width:""}} src={"img/logo/logo-nl.png"} alt="logo" />
+              <img
+                style={{ width: "" }}
+                src={"img/logo/logo-nl.png"}
+                alt="logo"
+              />
             </a>
           </div>
           <div className="menu">
@@ -25,7 +29,9 @@ const Header = () => {
                 <a href="#service">Service</a>
               </li>
               <li>
-                <a href="/blog">Blog</a>
+                <li>
+                  <a href="/blog">Blog</a>
+                </li>
               </li>
               <li>
                 <a href="#contact">Contact</a>
@@ -34,7 +40,6 @@ const Header = () => {
                 <a
                   href="https://nlagdhir.in/images/Nilesh_Lagdhir_CV.pdf"
                   target="_blank"
-                
                 >
                   <span>Download CV</span>
                 </a>
