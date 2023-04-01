@@ -29,9 +29,7 @@ const Header = () => {
                 <a href="#service">Service</a>
               </li>
               <li>
-                <li>
-                  <a href="/blog">Blog</a>
-                </li>
+                <a href="/blog">Blog</a>
               </li>
               <li>
                 <a href="#contact">Contact</a>

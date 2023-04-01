@@ -38,8 +38,8 @@ const handler = async (req, res) => {
       });
 
       let mailOptions = {
-        from: "tarequl.islalm@gmail.com",
-        to: "tarequl.islalm@gmail.com",
+        from: process.env.Email,
+        to: process.env.Email, 
         subject: subject,
         html: `<table cellspacing="0" style="border: 2px solid #282828; width: 900px; margin: 0 auto;border-radius: 6px;"> 
         <tr>

@@ -2332,8 +2332,8 @@ h6 {
   height: auto;
   clear: both;
   float: left;
-  padding-top: 185px;
-  margin-bottom: 160px;
+  /* padding-top: 185px;
+  margin-bottom: 160px; */
   position: relative;
 }
 
@@ -2890,7 +2890,7 @@ input::-webkit-inner-spin-button {
   clear: both;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .dizme_tm_copyright .left p {

@@ -71,53 +71,53 @@ const Contact = () => {
     setLoading(true);
     // client side validation
 
-    // let check = false;
-    // if (formInput.name.length <= 0) {
-    //   check = true;
-    //   setErrors((prev) => ({
-    //     ...prev,
-    //     ["name"]: "Name should not be empty!",
-    //   }));
-    // }
+    let check = false;
+    if (formInput.name.length <= 0) {
+      check = true;
+      setErrors((prev) => ({
+        ...prev,
+        ["name"]: "Name should not be empty!",
+      }));
+    }
 
-    // if (!isValidEmail(formInput.email)) {
-    //   check = true;
-    //   setErrors((prev) => ({
-    //     ...prev,
-    //     ["email"]: "Invalid email address",
-    //   }));
-    // }
-    // if (formInput.subject.length <= 0) {
-    //   check = true;
-    //   setErrors((prev) => ({
-    //     ...prev,
-    //     ["subject"]: "Subject should not be empty!",
-    //   }));
-    // }
+    if (!isValidEmail(formInput.email)) {
+      check = true;
+      setErrors((prev) => ({
+        ...prev,
+        ["email"]: "Invalid email address",
+      }));
+    }
+    if (formInput.subject.length <= 0) {
+      check = true;
+      setErrors((prev) => ({
+        ...prev,
+        ["subject"]: "Subject should not be empty!",
+      }));
+    }
 
-    // if (formInput.phone < 8) {
-    //   check = true;
-    //   setErrors((prev) => ({
-    //     ...prev,
-    //     ["phone"]: "Invalid Phone",
-    //   }));
-    // }
+    if (formInput.phone < 8) {
+      check = true;
+      setErrors((prev) => ({
+        ...prev,
+        ["phone"]: "Invalid Phone",
+      }));
+    }
 
-    // if (formInput.message.length < 20) {
-    //   check = true;
-    //   setErrors((prev) => ({
-    //     ...prev,
-    //     ["message"]: "Invalid Message, Type something more!",
-    //   }));
-    // }
+    if (formInput.message.length < 20) {
+      check = true;
+      setErrors((prev) => ({
+        ...prev,
+        ["message"]: "Invalid Message, Type something more!",
+      }));
+    }
 
-    // if (check) return false;
+    if (check) {
+      setLoading(false);
+      return false;
+    } 
 
     try {
       const data = await sendContactData(formInput);
-
-      console.log(data);
-      console.log("errors");
 
       setFormInput({
         name: "",
@@ -127,15 +127,13 @@ const Contact = () => {
         message: "",
       });
       setLoading(false);
-
-      console.log(data);
+;
       // setErrors(data);
       if (data.status) {
         setSuccessMessage(data.message);
       } else {
         if (data.errors) {
           setErrors(data.errors);
-          console.log(errors);
         } else {
           setErrors((prev) => ({
             ...prev,
@@ -144,8 +142,7 @@ const Contact = () => {
         }
       }
     } catch (error) {
-      console.log("errors");
-      // console.log("error",error)
+      console.log("error",error)
 
       // setErrors(error)
       // setErrors((prev) => ({
@@ -155,10 +152,10 @@ const Contact = () => {
       setLoading(false);
     }
   };
-  // const isValidEmail = (email) => {
-  //   // Check if email is in a valid format
-  //   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-  // };
+  const isValidEmail = (email) => {
+    // Check if email is in a valid format
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  };
 
   return (
     <div className="dizme_tm_section" id="contact">
@@ -316,7 +313,7 @@ const Contact = () => {
                   height={375}
                   style={{ width: "100%" }}
                   id="gmap_canvas"
-                  src="https://maps.google.com/maps?q=2880%20Broadway,%20New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                  src="https://maps.google.com/maps?q=Ahmedabad=&z=13&ie=UTF8&iwloc=&output=embed" 
                 />
                 <a href="https://www.embedgooglemap.net/blog/divi-discount-code-elegant-themes-coupon" />
                 <br />
