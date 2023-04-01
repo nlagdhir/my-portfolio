@@ -1,11 +1,11 @@
-import ReactMarkdown from "react-markdown";
+import ReactMarkdown from 'react-markdown'   
 
 const DetailsPopup = ({ open, close, data }) => {
   return (
     <div className={`dizme_tm_modalbox ${open ? "opened" : ""}`}>
       <div className="box_inner">
         <div className="close">
-          <a href="#" onClick={() => close()}>
+          <a onClick={() => close()}>
             <i className="icon-cancel" />
           </a>
         </div>
@@ -22,7 +22,7 @@ const DetailsPopup = ({ open, close, data }) => {
             <div className="portfolio_main_title">
               <h3>{data && data.name}</h3>
               <span>
-                <a style={{color:'#f75023'}} href="#">{data && data.category}</a>
+                <a style={{color:'#f75023'}} href="#"> {data && data.category && data.category.replace(/\s+/g, ", ")}</a>
               </span>
               <div />
             </div>
@@ -39,14 +39,14 @@ const DetailsPopup = ({ open, close, data }) => {
               </div>
               <div className="detailbox">
                 <ul>
-                  <li>
+                  {/* <li>
                     <span className="first">Client</span>
                     <span>{data && data.client}</span>
-                  </li>
+                  </li> */}
                   <li>
                     <span className="first">Category</span>
                     <span>
-                      <a href="#">{data && data.category}</a>
+                      {data && data.category && data.category.replace(/\s+/g, ", ")}
                     </span>
                   </li>
                   <li>

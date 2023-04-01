@@ -3,12 +3,11 @@
         "id": 1,
         "name": "Advice Generator",
         "img": "img/portfolio/advice.png",
-        "category": "Tailwind",
+        "category": "React API Tailwind", 
         "date": {
             "date": "2",
-            "month": "March"
+            "month": "March 23"
         },
-        "client": "Alvaro Morata",
         "details": [
             {"id":1,"text":"An advice generator per click app built with React is a web application that generates a piece of advice for the user every time they click a button. The app is built using React, a JavaScript library for building user interfaces, and an advice API, which provides the advice text."},
             {"id":2,"text":"The app would have a simple interface with a button that says Get Advice When the user clicks the button, the app would make a request to the advice API and display the advice text on the screen. The app could also have additional features, such as the ability to share the advice on social media or save it to a favorites list."}
@@ -20,12 +19,11 @@
         "id": 2,
         "name": "Movie Buzz",
         "img": "img/portfolio/movie2.png",
-        "category": "API",
+        "category": "React API Tailwind",
         "date": {
             "date": "10",
-            "month": "March"
+            "month": "March 23"
         },
-        "client": "Jhon Decap",
         "details": [
             {"id":1,"text":"A movie app built with React is a web-based application that enables users to browse and search for movies, view movie details, and save their favorite movies.React is a popular front-end JavaScript library for building user interfaces, and it's an excellent choice for building a movie app because of its component-based architecture and ability to manage complex state changes."},
             {"id":2,"text":"Planning with app's functionality and design  Before starting the development process, it's essential to plan out the app's features and design. This includes deciding on the user interface components, such as the homepage, search bar, movie cards, and movie details page \n As mentioned earlier, I need to choose a movie API to fetch movie data. The app needs to fetch data from the movie API and display it to the user. This step includes making HTTP requests to the API and parsing the JSON data."},
@@ -38,12 +36,11 @@
         "id": 3,
         "name": "Github Gallary",
         "img": "img/portfolio/github.png",
-        "category": "API",
+        "category": "React API",
         "date": {
             "date": "5",
-            "month": "March"
+            "month": "March 23"
         },
-        "client": "JP Morgan",
         "details": [
             {"id":1,"text":"A GitHub repository gallery built with React and the GitHub API is a web application that displays a collection of GitHub repositories and their information. The app is built using React, a JavaScript library for building user interfaces, and the GitHub API, which provides access to GitHub repositories and their metadata. "},
             {"id":2,"text":"The app would have a simple interface with a search bar where the user can enter a GitHub username. When the user submits the username, the app would make a request to the GitHub API to retrieve the user's repositories and their metadata. The app would then display the repositories in a gallery format, with each repository represented by a card containing its name, description, and other relevant information."},
@@ -60,9 +57,8 @@
         "category": "React",
         "date": {
             "date": "12",
-            "month": "March"
+            "month": "March 23"
         },
-        "client": "Hindol Deco",
         "details":[
             {"id":1,"text":"A sticky note app built with React and local storage is a web application that allows users to create and save virtual sticky notes on their computer. The app is built using React, a JavaScript library for building user interfaces, and local storage, which allows data to be stored locally in the user's browser."},
             {"id":2,"text":"The app would have a simple interface with a text box where the user can enter the text for their sticky note, and a button to save the note. When the user saves a note, it would be stored in local storage and displayed on the screen as a virtual sticky note. The user can then move the sticky note around on the screen, edit the text, or delete it."},
@@ -75,18 +71,17 @@
         "id": 5,
         "name": "Dictionary",
         "img": "img/portfolio/dictionary.png",
-        "category": "React",
+        "category": "React API",
         "date": {
             "date": "12",
-            "month": "March"
+            "month": "March 23"
         },
-        "client": "AKH Fider",
         "details":[
             {"id":1,"text":"A dictionary app built with React and TailwindCSS, and utilizing an API, would be a modern and user-friendly tool for looking up definitions, synonyms, and antonyms related information."},
             {"id":2,"text":"The app would have a clean and minimalist design, with a search bar at the top and a results section below. Users would be able to enter a word or phrase they would like to look up, and the app would return the relevant definitions and other information in a concise and easy-to-read format."},
             {"id":3,"text":"TailwindCSS would be used to style the app, making it responsive and visually appealing across different devices and screen sizes. The framework's utility-first approach would allow for quick and efficient styling changes without the need for custom CSS."},
             {"id":4,"text":"Use Package : Tailwind css, React"}
         ],
-        "demo": "https://dictionary-chi.vercel.app/"
+        "demo": "https://dictionary-chi.vercel.app/" 
     }
 ]

@@ -716,19 +716,19 @@ h6 {
   box-shadow: 24px 0px 72px rgba(54, 32, 152, 0.3);
 }
 
-.dizme_tm_hero .skills.illustrator {
-  background-color: #390000;
-  top: 20px;
+.dizme_tm_hero .skills.reactjs {
+  background-color: #ffffff;
+  top: 20px; 
   left: -30px;
 }
 
-.dizme_tm_hero .skills.photoshop {
-  background-color: #001631;
+.dizme_tm_hero .skills.nextjs { 
+  background-color: #ffffff;
   right: 70px;
   top: 80px;
 }
 
-.dizme_tm_hero .skills.figma {
+.dizme_tm_hero .skills.laravel {
   background-color: #fff;
   bottom: 60px;
   left: 140px;
@@ -743,12 +743,12 @@ h6 {
   height: 40px;
 }
 
-.dizme_tm_hero .skills.illustrator .svg {
+.dizme_tm_hero .skills.reactjs .svg {
   color: #ff9a00;
 }
 
-.dizme_tm_hero .skills.photoshop .svg {
-  color: #00a9ff;
+.dizme_tm_hero .skills.nextjs .svg {
+  color: #000000;
 }
 
 .dizme_tm_down {
@@ -3352,12 +3352,12 @@ input::-webkit-inner-spin-button {
     height: 25px;
   }
 
-  .dizme_tm_hero .skills.figma {
+  .dizme_tm_hero .skills.laravel {
     bottom: 20px;
     left: 100px;
   }
 
-  .dizme_tm_hero .skills.photoshop {
+  .dizme_tm_hero .skills.nextjs {
     right: 110px;
   }
 
