@@ -1,4 +1,3 @@
-import ReactMarkdown from 'react-markdown'   
 
 const DetailsPopup = ({ open, close, data }) => {
   return (

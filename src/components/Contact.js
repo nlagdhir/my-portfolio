@@ -219,10 +219,6 @@ const Contact = () => {
                   autoComplete="off"
                   onSubmit={handleFormSubmit}
                 >
-                  
-
-                 
-
                   <div className="input_list">
                     <ul>
                       <li>
@@ -286,14 +282,14 @@ const Contact = () => {
 
                     <p className="contact_error">{errors.message}</p>
                   </div>
-                  <button
+                  <div
                     disabled={loading}
                     type="submit"
                     className="dizme_tm_button"
                     id="send_message"
                   >
-                    {loading ? "Loading..." : "Send Message"}
-                  </button>
+                   <a><span> {loading ? "Loading..." : "Send Message"}</span> </a>
+                  </div>
                   {successMessage && (
                     <div className="returnmessage">
                       <p>{successMessage}</p>

@@ -8,8 +8,10 @@ const Blog = () => {
           <Head>
             <title>Lagdhir | Blog</title>
           </Head>
-          {/* NEWS */}
+          <div style={{marginTop:"100px"}}>
           <News /> 
+          </div>
+          
         </BlogLayer>
       );
 

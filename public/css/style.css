@@ -504,7 +504,6 @@ h6 {
   overflow: hidden;
   display: inline-block;
 }
-
 .dizme_tm_header .download_cv span {
   position: relative;
   z-index: 2;
@@ -540,6 +539,67 @@ h6 {
 .dizme_tm_header .download_cv a:hover span {
   color: #fff;
 }
+
+
+/* -------------------------- */
+/* Button */
+/* -------------------------- */
+.dizme_tm_button {
+  position: relative;
+  top: 3px;
+}
+
+.dizme_tm_button a {
+  border: 2px solid #f75023;
+  border-radius: 50px;
+  padding: 6px 35px 6px 35px;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+.dizme_tm_button a span {
+  position: relative;
+  z-index: 2;
+  color: #000;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.dizme_tm_button a:before {
+  position: absolute;
+  content: "";
+  z-index: 0;
+  background-color: #f75023;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  height: 0px;
+
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.dizme_tm_button a:hover:before {
+  height: 115%;
+}
+
+.dizme_tm_button a:hover span {
+  color: #fff;
+}
+
+
+
+
+
+
+
+
 
 /*---------------------------------------------------*/
 /*	04) DIZME HERO
@@ -650,7 +710,7 @@ h6 {
   width: auto;
 }
 
-.dizme_tm_button {
+/* .dizme_tm_button {
   color: #fff;
   font-family: "Jost", sans-serif;
   font-weight: 500;
@@ -667,7 +727,7 @@ h6 {
   background-color: #fff;
   color: #000;
   transition: all 0.3s ease;
-}
+} */
 
 .dizme_tm_hero .social {
   padding-left: 27px;
@@ -1736,14 +1796,14 @@ h6 {
 /*	09) DIZME SERVICES
 /*---------------------------------------------------*/
 
-.dizme_tm_full_link {
+/* .dizme_tm_full_link {
   position: absolute;
   top: 0px;
   bottom: 0px;
   left: 0px;
   right: 0px;
   z-index: 5;
-}
+} */
 
 .dizme_tm_services {
   width: 100%;
@@ -4100,12 +4160,12 @@ input::-webkit-inner-spin-button {
   .dizme_tm_hero .content{
     margin-top: 60px;
   }
-  .dizme_tm_button a {
-    padding: 0px 0px 0px 0px;
+ 
+.dizme_tm_button a {
+  padding: 2px 14px 2px 14px;
 }
-.dizme_tm_button {
-  padding: 0px 15px 0px;
-}
+
+
 .dizme_tm_hero .background {
   height: 640px;
 }
