@@ -556,6 +556,8 @@ h6 {
   position: relative;
   overflow: hidden;
   display: inline-block;
+  text-decoration: none;
+  font-weight: 500;
 }
 .dizme_tm_button a span {
   position: relative;
@@ -4163,6 +4165,7 @@ input::-webkit-inner-spin-button {
  
 .dizme_tm_button a {
   padding: 2px 14px 2px 14px;
+  text-decoration: none;
 }
 
 
