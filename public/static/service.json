@@ -9,9 +9,13 @@
       "iconBg": "img/brushes/service/1.png"
     },
     "dec": [
-      "Dizme is a leading web development agency with an award-winning develop team that creates innovative, effective websites that capture your brand, improve your conversion rates, and maximize your revenue to help grow your business and achieve your goals.",
-      "In today’s digital world, your website is the first interaction consumers have with your business. That's why almost 95 percent of a user’s first impression relates to web development. It’s also why web development services can have an immense impact on your company’s bottom line.",
-      "That’s why more companies are not only reevaluating their website’s development but also partnering with Kura, the web development agency that’s driven more than $2.4 billion in revenue for its clients. With over 50 web development awards under our belt, we're confident we can develop a custom website that drives sales for your unique business."
+      "Website design: I design a website layout, create graphics, and choose the right color scheme to ensure the website is visually appealing and user-friendly.",
+      "Front-end development: This involves coding the user interface of a website using languages such as HTML, CSS, and JavaScript. As a front-end developer I ensure that the website is responsive, accessible, and optimized for various devices.",
+      "Back-end development: This involves creating the server-side of the website, managing databases, and integrating with other systems.As a back-end developer I ensure that the website runs smoothly, securely, and efficiently.",
+      "Content management system (CMS) integration: I can integrate a CMS like WordPress into a website, allowing the client to manage the content without any technical expertise.",
+      "E-commerce development: I can build an e-commerce website with features such as product catalog, shopping cart, payment gateway integration, and order management.",
+      "Web hosting and maintenance: I can provide web hosting services and ensure that the website is regularly updated and maintained, including security patches, backups, and performance optimization.",
+      "Overall, I provides a range of web development services to help clients establish an online presence, reach their target audience, and achieve their business goals."
     ]
   },
   {
@@ -24,8 +28,10 @@
       "iconBg": "img/brushes/service/2.png"
     },
     "dec": [
-      "In today's technology-driven world, businesses rely heavily on software applications to streamline their operations and gain a competitive edge. However, with multiple applications often operating in silos, it becomes challenging to share data and automate workflows. This is where APIs come in. APIs allow software applications to communicate and share data with each other, enabling businesses to integrate their various systems and automate their workflows. This is where API Development Services come into the picture.",
-      "API Development Services refer to the process of creating APIs that enable different software applications to communicate and share data with each other. These services include designing and building APIs, testing and debugging them, documenting their functionality, integrating them with other systems, and maintaining and supporting them over time."
+      "API design: I can design an API that is easy to use, secure, and scalable. The API design includes defining the endpoints, request and response formats, authentication, and authorization mechanisms.",
+      "API documentation: I can document the API to make it easy for developers to understand how to use it. The documentation includes information such as API endpoints, request and response formats, error codes, and usage examples.",
+      "API testing: I can also perform unit testing, integration testing, and load testing to ensure that the API is reliable and performs well under various conditions.",
+      "API versioning:As a web developer I can manage API versioning to ensure that changes to the API do not break existing integrations. The API developer ensures that changes are communicated to the client and other stakeholders."
     ]
   },
   {
