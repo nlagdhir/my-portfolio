@@ -3,7 +3,7 @@
   "address": "India",
   "bio": "I'm Full Stack developer based in India, and I'm very passionate and dedicated to my work.",
   "mainSkill": "FullStack Developer",
-  "img": "/img/slider/avatar.jpg",
+  "img": "/img/slider/avatar.png",
   "skills": [
     {
       "name": "reactjs", 
