@@ -16,7 +16,7 @@ const Intro = () => {
             <span className="anim" />
             <span className="anim" />
             <span className="anim" />
-            <a href="#" target="_blank" className="pricing-info anim">
+            <a href="#" target="_blank" rel="noreferrer" className="pricing-info anim">
               -20%
             </a>
           </div>

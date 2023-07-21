@@ -4,8 +4,8 @@ import BlogLayer from "../../src/layout/BlogLayer";
 import { blogData } from './../../public/static/blog.js';
 import  SyntaxHighlighter  from 'react-syntax-highlighter';
 import { atomOneDark } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
-function blogDetails() {
-
+const blogDetails = () => {
+ 
   const [data, setData] = useState({});
   const router = useRouter();
   useEffect(()=>{

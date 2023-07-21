@@ -75,9 +75,9 @@ const Service = ({ dark }) => {
                           </span>
                           <div className="title">
                             <h3>{data.title}</h3>
-                            <span className="price">
+                            {/* <span className="price">
                               Starts from <span>${data.price}</span>
-                            </span>
+                            </span> */}
                           </div>
                           <div className="text">
                             <p>{data.shortDec}</p>

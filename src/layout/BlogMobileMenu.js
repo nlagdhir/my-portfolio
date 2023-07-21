@@ -59,7 +59,7 @@ const MobileMenu = () => {
             </li>
             <li className="download_cv">
               <a  href="https://nlagdhir.in/images/Nilesh_Lagdhir_CV.pdf"
-                  target="_blank">
+                  target="_blank" rel="noreferrer">
                 <span>Download CV</span>
               </a>
             </li>
