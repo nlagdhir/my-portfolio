@@ -11,7 +11,7 @@ const BlogDetails = () => {
   const router = useRouter();
   useEffect(()=>{
     if(router.isReady){
-      const slug = router.query.blogslug;
+      const slug = router.query?.blogslug;
         const blog = blogData.find((d) => d.slug === slug);
         setData(blog);
     }
