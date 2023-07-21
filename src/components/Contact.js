@@ -114,7 +114,7 @@ const Contact = () => {
     if (check) {
       setLoading(false);
       return false;
-    } 
+    }
 
     try {
       const data = await sendContactData(formInput);
@@ -127,7 +127,6 @@ const Contact = () => {
         message: "",
       });
       setLoading(false);
-;
       // setErrors(data);
       if (data.status) {
         setSuccessMessage(data.message);
@@ -142,13 +141,6 @@ const Contact = () => {
         }
       }
     } catch (error) {
-      console.log("error",error)
-
-      // setErrors(error)
-      // setErrors((prev) => ({
-      //   ...prev,
-      //   ["server_error"]: error.message,
-      // }));
       setLoading(false);
     }
   };
@@ -178,7 +170,7 @@ const Contact = () => {
                       <div className="icon orangeBackground">
                         <i className="icon-location orangeText" />
                       </div>
-                      <div className="short">
+                      <div className="short"> 
                         <h3>Address</h3>
                         <span>{data.contact.address}</span>
                       </div>
@@ -282,19 +274,26 @@ const Contact = () => {
 
                     <p className="contact_error">{errors.message}</p>
                   </div>
-                  <div
-                    disabled={loading}
-                    type="submit"
-                    className="dizme_tm_button"
-                    id="send_message"
-                  >
-                   <a><span> {loading ? "Loading..." : "Send Message"}</span> </a>
-                  </div>
                   {successMessage && (
                     <div className="returnmessage">
                       <p>{successMessage}</p>
                     </div>
                   )}
+                  <div
+                    disabled={loading}
+                    type="submit"
+                    className="dizme_tm_button submit_area"
+                    id="send_message"
+                  >
+                    <button
+                      disabled={loading}
+                      type="submit"
+                      className="dizme_tm_submit"
+                      id="send_message"
+                    >
+                      {loading ? "Loading..." : "Send Message"}
+                    </button>
+                  </div>
                 </form>
               </div>
             </div>
@@ -309,7 +308,7 @@ const Contact = () => {
                   height={375}
                   style={{ width: "100%" }}
                   id="gmap_canvas"
-                  src="https://maps.google.com/maps?q=Ahmedabad=&z=13&ie=UTF8&iwloc=&output=embed" 
+                  src="https://maps.google.com/maps?q=Ahmedabad=&z=13&ie=UTF8&iwloc=&output=embed"
                 />
                 <a href="https://www.embedgooglemap.net/blog/divi-discount-code-elegant-themes-coupon" />
                 <br />

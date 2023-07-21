@@ -17,9 +17,9 @@ const News = () => {
               {data &&
                 data.map((blog, i) => (
                   <li className="wow fadeInUp" data-wow-duration="1s" key={i}>
-                    <Link href={`blog/${blog.slug}`}>
+                    <a href={`blog/${blog.slug}`}>
                     <div  className="list_inner">
-                    <a>
+                    
                     <div className="image">
                           <img src="img/thumbs/42-29.jpg" alt="image" />
                           <div
@@ -45,10 +45,9 @@ const News = () => {
                         </div>
                         <div className="news_hidden_details">
                         </div>
-                    </a>
+                    
                     </div>
-                    </Link>
-                  
+                    </a>
                   </li>
                 ))}
             </ul>

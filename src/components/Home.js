@@ -57,7 +57,7 @@ const Home = ({ dark }) => {
             <div className="avatar">
               <div className="image">
                 <img
-                  src={data && data.img ? data.img : "/img/slider/nilesh.jpg"}
+                  src={data && data.img ? data.img : "/img/slider/nilesh.png"}
                   alt="image"
                 />
                 {data &&

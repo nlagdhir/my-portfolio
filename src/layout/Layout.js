@@ -40,14 +40,14 @@ const Layout = ({ children, dark }) => {
           logo={
             siteInfo && siteInfo.logo && siteInfo.logo[dark ? "dark" : "light"]
           }
-        />
+        />  
         <Header
           logo={
             siteInfo && siteInfo.logo && siteInfo.logo[dark ? "dark" : "light"]
           }
         />
         {children}
-        <CopyRight brandName={siteInfo && siteInfo.brandName} />
+        <CopyRight brandName={siteInfo && siteInfo.brandName} /> 
         <Cursor />
         <Progressbar /> 
       </div>

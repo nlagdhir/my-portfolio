@@ -549,6 +549,10 @@ h6 {
   top: 3px;
 }
 
+.submit_area {
+  float: left;
+}
+
 .dizme_tm_button a {
   border: 2px solid #f75023;
   border-radius: 50px;
@@ -594,6 +598,32 @@ h6 {
 .dizme_tm_button a:hover span {
   color: #fff;
 }
+
+.dizme_tm_submit {
+  border: 2px solid #f75023;
+  border-radius: 50px;
+  padding: 11px 22px 11px 22px;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 500;
+  background: white;
+  font-family: "Jost", sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.dizme_tm_submit:hover {
+ color: white;
+ background: #f75023;
+ transition: all 0.3s ease;
+ top:0px
+}
+
+
 
 
 
@@ -2901,7 +2931,7 @@ input::-webkit-inner-spin-button {
 .dizme_tm_contact .contact_error {
   color: #f52225;
   text-align: left;
-  font-weight: 500;
+  font-weight: 300;
 }
 
 .dizme_tm_contact .returnmessage {
@@ -2910,6 +2940,8 @@ input::-webkit-inner-spin-button {
   text-align: left;
   padding-top: 20px;
   font-weight: 500;
+  width: 100%;
+  float: left;
 }
 
 .dizme_tm_map {
