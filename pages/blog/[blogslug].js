@@ -1,12 +1,13 @@
+import React from 'react';
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import BlogLayer from "../../src/layout/BlogLayer";
 import { blogData } from './../../public/static/blog.js';
 import  SyntaxHighlighter  from 'react-syntax-highlighter';
 import { atomOneDark } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
-const blogDetails = () => {
+const BlogDetails = () => {
  
-  const [data, setData] = useState({});
+  const [data, setData] = useState({}); 
   const router = useRouter();
   useEffect(()=>{
     if(router.isReady){
@@ -54,4 +55,4 @@ const blogDetails = () => {
   );
 }
 
-export default blogDetails;
+export default BlogDetails;
