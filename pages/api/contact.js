@@ -24,6 +24,7 @@ function validateFormData(name, email, phone, subject, message) {
 
 const handler = async (req, res) => {
   if (req.method === "POST") {
+    
     const { name, email, phone, subject, message } = req.body;
 
     const errors = validateFormData(name, email, phone, subject, message);
@@ -60,7 +61,7 @@ const handler = async (req, res) => {
                                                         <td class="mcnImageContent" style="padding-right: 9px; padding-left: 9px; padding-top: 0; padding-bottom: 0; text-align:center;" valign="top">
                                                           <img style="height: 80px" src="https://i.ibb.co/nMCqmgt/logo.jpg"></img>
                                                         </td>
-                                                     </tr>
+                                                     </tr> 
                                                   </tbody>
                                                </table>
                                             </td>
