@@ -1,5 +1,5 @@
 import nodemailer from "nodemailer";
-import logo from '../../public/img/logo/logo.jpg'
+
 function validateFormData(name, email, phone, subject, message) {
   let errors = {};
 
