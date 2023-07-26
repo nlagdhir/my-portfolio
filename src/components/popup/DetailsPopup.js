@@ -31,7 +31,7 @@ const DetailsPopup = ({ open, close, data }) => {
                 <p key={para.id}>{para.text}</p>
                 ) }
                 <div className="demo_button">
-                  <a href={data && data.demo} target="_blank">
+                  <a href={data && data.demo} rel="noreferrer" target="_blank"> 
                     View Project
                   </a>
                 </div>
