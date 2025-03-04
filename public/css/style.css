@@ -504,6 +504,7 @@ h6 {
   overflow: hidden;
   display: inline-block;
 }
+
 .dizme_tm_header .download_cv span {
   position: relative;
   z-index: 2;
@@ -563,6 +564,7 @@ h6 {
   text-decoration: none;
   font-weight: 500;
 }
+
 .dizme_tm_button a span {
   position: relative;
   z-index: 2;
@@ -617,10 +619,10 @@ h6 {
 }
 
 .dizme_tm_submit:hover {
- color: white;
- background: #f75023;
- transition: all 0.3s ease;
- top:0px
+  color: white;
+  background: #f75023;
+  transition: all 0.3s ease;
+  top: 0px
 }
 
 
@@ -810,11 +812,11 @@ h6 {
 
 .dizme_tm_hero .skills.reactjs {
   background-color: #ffffff;
-  top: 20px; 
+  top: 20px;
   left: -30px;
 }
 
-.dizme_tm_hero .skills.nextjs { 
+.dizme_tm_hero .skills.nextjs {
   background-color: #ffffff;
   right: 70px;
   top: 80px;
@@ -1818,6 +1820,7 @@ h6 {
 .dizme_tm_skills .right {
   width: 50%;
   padding-left: 100px;
+
 }
 
 .dizme_tm_skills .right img {
@@ -3695,7 +3698,7 @@ input::-webkit-inner-spin-button {
   }
 
   .dizme_tm_hero .content {
-    flex-direction: column-reverse;
+    /* flex-direction: column-reverse; */
     justify-content: center;
   }
 
@@ -3710,18 +3713,28 @@ input::-webkit-inner-spin-button {
     max-height: 300px;
   }
 
-  .dizme_tm_hero .skills {
+  /* .dizme_tm_hero .skills {
     display: none;
+  } */
+
+  .dizme_tm_hero .skills.nextjs {
+    right: 0px;
+    ;
+  }
+
+  .dizme_tm_hero .skills {
+    width: 40px;
+    height: 40px;
   }
 
   .dizme_tm_hero .details {
-    width: 100%;
+    width: 50%;
     padding-right: 0px;
-    text-align: center;
+    text-align: left;
   }
 
   .dizme_tm_hero .button {
-    justify-content: center;
+    justify-content: left;
   }
 
   .dizme_tm_hero .hello h3 {
@@ -3862,6 +3875,7 @@ input::-webkit-inner-spin-button {
   .dizme_tm_skills .right {
     padding-left: 0px;
     width: 100%;
+    text-align: center;
   }
 
   .dizme_tm_skills .right img {
@@ -3991,6 +4005,30 @@ input::-webkit-inner-spin-button {
   .dizme_tm_detailsbox {
     margin-top: '85px';
   }
+
+  .dizme_tm_hero .job {
+    margin-bottom: 15px;
+  }
+
+  .dizme_tm_hero .job p {
+    font-size: 18px;
+  }
+
+  .dizme_tm_hero .hello h3 {
+    font-size: 21px;
+  }
+
+  .dizme_tm_hero .text p {
+    font-size: 16px;
+  }
+
+  .dizme_tm_hero .name h3 {
+    font-size: 42px;
+  }
+
+  .dizme_tm_hero .social {
+    padding-left: 15px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -4055,7 +4093,7 @@ input::-webkit-inner-spin-button {
   .dizme_tm_partners ul li {
     width: 50%;
   }
- 
+
 
   .dizme_tm_news ul {
     margin: 0px;
@@ -4188,37 +4226,69 @@ input::-webkit-inner-spin-button {
   .dizme_tm_contact {
     margin-bottom: 120px;
   }
+
+  .dizme_tm_hero .content {
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+
+  .dizme_tm_hero .details {
+    text-align: center;
+    width: 100%;
+  }
+
+  .dizme_tm_hero .button {
+    justify-content: center;
+  }
+
+  .dizme_tm_button a {
+    padding: 2px 14px 2px 14px;
+  }
+
+  .dizme_tm_button a:hover {
+    padding: 2px 14px 2px 14px;
+  }
 }
 
 @media (max-width: 460px) {
-  .dizme_tm_hero .content{
+  .dizme_tm_hero .content {
     margin-top: 60px;
   }
- 
-.dizme_tm_button a {
-  padding: 2px 14px 2px 14px;
-  text-decoration: none;
-}
+
+  .dizme_tm_button a {
+    padding: 2px 14px 2px 14px;
+    text-decoration: none;
+  }
+
+  .dizme_tm_button a:hover {
+    padding: 2px 14px 2px 14px;
+    text-decoration: none;
+  }
 
 
-.dizme_tm_hero .background {
+  /* .dizme_tm_hero .background {
   height: 640px;
-}
-.dizme_tm_hero .details {
-  margin-top: -20px;
-}
-.dizme_tm_hero .avatar img {
-  margin-top: -60px;
-}
-.dizme_tm_hero .button {
-  margin-top: -8px;
-}
-.dizme_tm_down {
-  bottom: -75px;
-}
+} */
+  .dizme_tm_hero .details {
+    margin-top: -20px;
+  }
+
+  .dizme_tm_hero .avatar img {
+    margin-top: -60px;
+  }
+
+  .dizme_tm_hero .button {
+    margin-top: -8px;
+  }
+
+  .dizme_tm_down {
+    bottom: -75px;
+  }
+
   .dizme_tm_hero .name h3 {
     font-size: 28px;
-}
+  }
+
   .dizme_tm_modalbox .main_details {
     display: flex;
     flex-flow: column;
@@ -4238,12 +4308,15 @@ input::-webkit-inner-spin-button {
   .dizme_tm_modalbox .description_wrap {
     padding: 10px;
   }
+
   .dizme_tm_news {
     padding-top: 0px;
-}
-.dizme_tm_contact {
-  padding-top: 0px;
-}
+  }
+
+  .dizme_tm_contact {
+    padding-top: 0px;
+  }
+
   .demo_button {
     padding-top: 15px;
   }
@@ -4254,5 +4327,10 @@ input::-webkit-inner-spin-button {
 
   .description_wrap h3 {
     font-size: 22px;
+  }
+
+  .dizme_tm_hero .skills.nextjs {
+    right: -20px;
+    top: 0px;
   }
 }
