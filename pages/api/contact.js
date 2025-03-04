@@ -128,9 +128,9 @@ const handler = async (req, res) => {
       };
 
       let mailOptionsForUser = {
-        from: "tarequl.islalm@gmail.com",
+        from: process.env.Email,
         to: email,
-        subject: "Thanks",
+        subject: "Thank You for Your Inquiry – We’ll Get Back to You Soon!",
         html: `  <table cellspacing="0" style="border: 2px solid #282828; width: 900px; margin: 0 auto;border-radius: 6px;"> 
         <tr>
             <td align="center" valign="top" id="bodyCell" style="padding: 0px;">      
@@ -165,7 +165,7 @@ const handler = async (req, res) => {
                     </tr>
                     <tr align="center" style="background-color:hsl(0, 100%, 81%); "> 
                     <td style="color:#222;padding: 8px 0px; border:1px solid #ede9e9; font-weight: 600;font-size: 14px; padding: 20px;">
-                      <p style="margin:0px;">Thank you for your message. <br/>Our team will get back to you soon.</p>
+                      <p style="margin:0px;">Thank you for reaching out to us! <br/> We have received your inquiry and will respond as soon as possible.</p>
                     </td>
                   </tr>
                 </table>         

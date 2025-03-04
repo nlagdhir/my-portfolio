@@ -60,20 +60,67 @@ img.mfp-img {
   top: -110px;
   right: -24px;
 }
-.main-menu li.active > a,
-.header-navigation .main-menu ul > li.has-children.active > a:after {
+
+.main-menu li.active>a,
+.header-navigation .main-menu ul>li.has-children.active>a:after {
   color: #ff344f !important;
 }
 
 span.current {
   color: unset !important;
 }
+
 .owl-carousel {
   display: unset !important;
 }
 
 .py-50 {
   padding: 50px 0;
+}
+
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.whatsapp-container {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+
+.whatsapp-button {
+  background-color: #25D366;
+  /* WhatsApp green */
+  color: white;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease, transform 0.2s ease;
+  text-decoration: none;
+  animation: bounce 1.5s infinite;
+}
+
+.whatsapp-button:hover {
+  background-color: #1ebe57;
+  /* Darker green on hover */
+  transform: scale(1.1);
+}
+
+.whatsapp-icon {
+  font-size: 30px;
 }
 
 .progress-block .graph-outer .count-box {
@@ -90,6 +137,7 @@ span.current {
 .block-fourty-six .ul {
   margin-bottom: 5px;
 }
+
 .block-fourty-six .ul i {
   color: #be9a78;
 }
@@ -98,11 +146,15 @@ span.current {
   height: 600px;
   width: 100%;
 }
+
 @media (max-width: 1600px) {
   .mfp-img-container .mfp-content {
-    max-width: 600px 
-  }}
+    max-width: 600px
+  }
+}
+
 @media (max-width: 400px) {
   .mfp-img-container .mfp-content {
-    max-width: 380px 
-  }}
+    max-width: 380px
+  }
+}

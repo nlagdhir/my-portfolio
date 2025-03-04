@@ -16,6 +16,7 @@ import Header from "./Header";
 import MobileMenu from "./MobileMenu";
 import PreLoader from "./PreLoader";
 import Progressbar from "./Progressbar";
+import WhatsAppChat from "../components/WhatsAppChat";
 
 const Layout = ({ children, dark }) => {
   const [siteInfo, setSiteInfo] = useState({});
@@ -48,8 +49,10 @@ const Layout = ({ children, dark }) => {
         />
         {children}
         <CopyRight brandName={siteInfo && siteInfo.brandName} /> 
+        <WhatsAppChat /> {/* Add this */}
         <Cursor />
         <Progressbar /> 
+        
       </div>
     </Fragment>
   );

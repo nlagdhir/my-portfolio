@@ -49,7 +49,7 @@ const Contact = () => {
     const data = await response.json();
 
     if (!response.ok) {
-      throw new Error(data.message || "Something went wront!");
+      throw new Error(data.message || "Something went wrong!");
     }
 
     return data;
@@ -279,6 +279,7 @@ const Contact = () => {
                       <p>{successMessage}</p>
                     </div>
                   )}
+                  <p className="contact_error">{errors.server_error}</p>
                   <div
                     disabled={loading}
                     type="submit"
