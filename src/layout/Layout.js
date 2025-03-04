@@ -32,7 +32,7 @@ const Layout = ({ children, dark }) => {
     window.addEventListener("scroll", scrollTop);
   }, []);
   return (
-    <Fragment>
+    <Fragment> 
       <PreLoader />
       {/* <ImageView /> */}
       {/* <VideoPopup /> */}
