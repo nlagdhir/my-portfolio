@@ -3,7 +3,9 @@ import { preloader } from "../utilits";
 
 const PreLoader = () => {
   useEffect(() => {
-    preloader();
+    setTimeout(() => {
+      preloader();
+    }, 1000);
   }, []);
 
   return (

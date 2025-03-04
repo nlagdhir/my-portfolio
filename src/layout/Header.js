@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const Header = () => {
   return (
@@ -7,11 +8,7 @@ const Header = () => {
         <div className="inner">
           <div className="logo">
             <a href="/">
-              <img
-                style={{ width: "" }}
-                src={"img/logo/logo-nl.png"}
-                alt="logo"
-              />
+            <Image src="/img/logo/logo-nl.png" width={150} height={53} alt="NL logo" />
             </a>
           </div>
           <div className="menu">
