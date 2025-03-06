@@ -83,5 +83,21 @@
             {"id":4,"text":"Use Package : Tailwind css, React"}
         ],
         "demo": "https://dictionary-chi.vercel.app/" 
+    },
+    {
+        "id": 6,
+        "name": "IKSV",
+        "img": "img/portfolio/tbap.png",
+        "category": "Wordpress",
+        "date": {
+            "date": "10",
+            "month": "March 23"
+        },
+        "details": [
+            {"id":1,"text":"The IKSV website is built using WordPress with a fully custom theme tailored to the client's needs. To enhance the user experience, we developed two distinct themes—one for mobile and another for desktop. The website dynamically switches between these themes based on the user’s device, ensuring an optimized and seamless browsing experience."},
+            {"id":2,"text":"Additionally, we implemented an interactive event section that showcases events with engaging animations, making the content more visually appealing. The website also supports multiple languages, allowing it to cater to a diverse audience while maintaining a smooth and intuitive user experience."}
+        ],
+       
+        "demo": "http://tbap.iksv.org/"
     }
 ]
