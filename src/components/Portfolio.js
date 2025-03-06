@@ -78,6 +78,14 @@ const Portfolio = () => {
               </li>
               <li>
                 <a
+                  className={`c-pointer ${activeBtn("Wordpress")}`}
+                  onClick={handleFilterKeyChange("Wordpress")}
+                >
+                  Wordpress
+                </a>
+              </li>
+              <li>
+                <a
                   className={`c-pointer ${activeBtn("Tailwind")}`}
                   onClick={handleFilterKeyChange("Tailwind")}
                 >
