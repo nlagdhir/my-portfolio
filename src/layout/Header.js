@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Header = () => {
   return (
-    <div className="dizme_tm_header">
+    <div className="dizme_tm_header animate">
       <div className="container">
         <div className="inner">
           <div className="logo">

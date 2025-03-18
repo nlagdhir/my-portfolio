@@ -154,19 +154,19 @@ export const scroll_ = () => {
     }
   });
 };
-export const stickyNav = () => {
-  let offset = window.scrollY;
-  const stickys = document.querySelectorAll(".dizme_tm_header");
-  stickys.forEach((sticky) => {
-    if (sticky) {
-      if (offset > 100) {
-        sticky.classList.add("animate");
-      } else {
-        sticky.classList.remove("animate");
-      }
-    }
-  });
-};
+// export const stickyNav = () => {
+//   let offset = window.scrollY;
+//   const stickys = document.querySelectorAll(".dizme_tm_header");
+//   stickys.forEach((sticky) => {
+//     if (sticky) {
+//       if (offset > 0) {
+//         sticky.classList.add("animate");
+//       } else {
+//         sticky.classList.remove("animate");
+//       }
+//     }
+//   });
+// };
 
 export const scrollTop = () => {
   var bar = document.querySelector(".progressbar");
