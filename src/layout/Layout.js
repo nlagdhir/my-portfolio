@@ -8,7 +8,7 @@ import {
   fatchData,
   scrollTop,
   scroll_,
-  stickyNav,
+  // stickyNav,
   wowJsAnimation,
 } from "../utilits";
 import Cursor from "./Cursor";
@@ -28,7 +28,7 @@ const Layout = ({ children, dark }) => {
     wowJsAnimation();
     aTagClick();
     window.addEventListener("scroll", scroll_);
-    window.addEventListener("scroll", stickyNav);
+    // window.addEventListener("scroll", stickyNav);
     window.addEventListener("scroll", scrollTop);
   }, []);
   return (
