@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import TrustBar from '@/components/landing/TrustBar'
 import WhyWorkWithMeLanding from '@/components/landing/WhyWorkWithMeLanding'
 import MiddleCTA from '@/components/landing/MiddleCTA'
+import CalendlyEmbed from '@/components/landing/CalendlyEmbed'
 
 export const metadata: Metadata = {
   title: 'Custom Web Application Development – Laravel & Next.js | Nilesh Lagdhir',
@@ -242,12 +243,116 @@ export default function CustomWebApplicationDevelopmentPage() {
         </div>
       </section>
 
+      {/* ── Recent Projects ───────────────────────────────────── */}
+      <section className="bg-slate-50 py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">Recent Projects</h2>
+            <p className="text-lg text-slate-600 max-w-xl mx-auto">
+              Custom applications built to solve real operational problems.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-7">
+            {[
+              {
+                label: 'Logistics & Operations',
+                title: 'Dispatch Management CRM — USA Logistics Company',
+                desc: 'End-to-end dispatch management system with AI voice agent integration, driver portal, real-time tracking dashboard, and automated customer notifications.',
+                gradient: 'from-blue-600 to-indigo-700',
+                tags: ['Laravel', 'React', 'OpenAI', 'VAPI', 'PostgreSQL'],
+                result: '50% fewer manual calls',
+              },
+              {
+                label: 'Healthcare Technology',
+                title: 'Patient Communication Platform — Hospital Group',
+                desc: 'Secure tablet-enabled platform for patient-family communication during hospital stays — real-time messaging, video calls, and care update notifications.',
+                gradient: 'from-rose-500 to-pink-700',
+                tags: ['React', 'Node.js', 'WebRTC', 'PostgreSQL'],
+                result: '92% patient satisfaction',
+              },
+            ].map((p) => (
+              <div key={p.title} className="bg-white rounded-2xl overflow-hidden border border-slate-100 hover:shadow-xl transition-shadow">
+                <div className={`bg-gradient-to-r ${p.gradient} px-7 py-8 relative overflow-hidden`}>
+                  <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle, white 1px, transparent 1px)', backgroundSize: '20px 20px' }} />
+                  <div className="relative z-10">
+                    <span className="inline-block px-3 py-1 rounded-full bg-white/20 text-white/90 text-xs font-semibold mb-3">{p.label}</span>
+                    <h3 className="text-white font-bold text-lg leading-snug mb-3">{p.title}</h3>
+                    <div className="text-white font-extrabold text-xl">{p.result}</div>
+                  </div>
+                </div>
+                <div className="px-7 py-5">
+                  <p className="text-slate-600 text-sm leading-relaxed mb-4">{p.desc}</p>
+                  <div className="flex flex-wrap gap-2">
+                    {p.tags.map((tag) => (
+                      <span key={tag} className="px-2.5 py-1 rounded-md bg-slate-100 text-slate-600 text-xs font-medium">{tag}</span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── Middle CTA ───────────────────────────────────────── */}
       <MiddleCTA
         headline="Have a project in mind? Let's talk."
         subtext="Book a free consultation and we will walk through your requirements, the right tech choices, and a realistic timeline."
         primaryText="Book Free Consultation"
       />
+
+      {/* ── Pricing Guidance ──────────────────────────────────── */}
+      <section className="bg-white py-20">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <span className="inline-block px-3 py-1 rounded-full bg-green-50 text-green-700 text-xs font-semibold uppercase tracking-widest mb-4">Pricing Guidance</span>
+            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">What to Budget For</h2>
+            <p className="text-lg text-slate-600 max-w-xl mx-auto">
+              Every project is scoped individually — these are starting ranges to help you plan.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[
+              {
+                name: 'Internal Tool / Dashboard',
+                range: '$2,500 – $6,000',
+                timeline: '4–6 weeks',
+                highlight: false,
+                items: ['Admin panel / dashboard', 'Role-based access', 'Data import / export', 'Basic reporting'],
+              },
+              {
+                name: 'CRM / Customer Portal',
+                range: '$6,000 – $15,000',
+                timeline: '6–10 weeks',
+                highlight: true,
+                items: ['Custom CRM or portal', 'Multi-role user system', 'Third-party integrations', 'Email & notification flows'],
+              },
+              {
+                name: 'SaaS Platform',
+                range: '$15,000+',
+                timeline: '3–5 months',
+                highlight: false,
+                items: ['Multi-tenant architecture', 'Subscription & billing', 'Onboarding & user management', 'Scalable infrastructure'],
+              },
+            ].map((tier) => (
+              <div key={tier.name} className={`rounded-2xl border p-7 ${tier.highlight ? 'border-blue-300 bg-blue-50 shadow-md' : 'border-slate-100 bg-slate-50'}`}>
+                {tier.highlight && <div className="text-xs font-bold text-blue-600 uppercase tracking-widest mb-3">Most Popular</div>}
+                <h3 className="font-bold text-slate-900 text-lg mb-1">{tier.name}</h3>
+                <div className="text-2xl font-extrabold text-gradient mb-1">{tier.range}</div>
+                <div className="text-sm text-slate-500 mb-5">{tier.timeline} delivery</div>
+                <ul className="space-y-2">
+                  {tier.items.map((item) => (
+                    <li key={item} className="flex items-start gap-2 text-sm text-slate-600">
+                      <span className="text-blue-500 mt-0.5 shrink-0">✓</span>{item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+          <p className="text-center text-sm text-slate-500 mt-8">All projects are fixed-price. A full quote is provided after the discovery call — no surprises.</p>
+        </div>
+      </section>
 
       {/* ── Testimonial ───────────────────────────────────────── */}
       <section className="bg-white py-16">
@@ -262,7 +367,12 @@ export default function CustomWebApplicationDevelopmentPage() {
             project."
           </blockquote>
           <p className="font-semibold text-slate-900">Michael R.</p>
-          <p className="text-sm text-slate-500 mt-1">Operations Director, Logistics Services, USA</p>
+          <div className="flex items-center justify-center gap-2 mt-1 flex-wrap">
+            <p className="text-sm text-slate-500">Operations Director, Logistics Services, USA</p>
+            <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-green-100 text-green-700 text-xs font-semibold">
+              ✓ Verified Client
+            </span>
+          </div>
         </div>
       </section>
 
@@ -312,6 +422,21 @@ export default function CustomWebApplicationDevelopmentPage() {
               </details>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ── Book a Call ───────────────────────────────────────────────────────── */}
+      <section className="bg-slate-50 py-20">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-3">
+              Pick a Time That Works for You
+            </h2>
+            <p className="text-lg text-slate-600">
+              Book a free call directly below — no back-and-forth email needed.
+            </p>
+          </div>
+          <CalendlyEmbed />
         </div>
       </section>
 
