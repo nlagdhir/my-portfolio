@@ -1,0 +1,113 @@
+<svg width="600" height="340" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,sans-serif">
+  <!-- White background -->
+  <rect width="600" height="340" fill="#f8fafc"/>
+
+  <!-- Sidebar -->
+  <rect x="0" y="0" width="148" height="340" fill="#1e1b4b"/>
+
+  <!-- Logo -->
+  <rect x="16" y="16" width="32" height="32" rx="8" fill="#7c3aed"/>
+  <text x="32" y="37" font-size="14" font-weight="800" fill="#ffffff" text-anchor="middle">S</text>
+  <text x="58" y="38" font-size="11" font-weight="700" fill="#ffffff">SaasApp</text>
+
+  <!-- Nav items -->
+  <rect x="10" y="68" width="128" height="28" rx="6" fill="#7c3aed"/>
+  <text x="44" y="86" font-size="10" font-weight="600" fill="#ffffff">Dashboard</text>
+
+  <text x="28" y="116" font-size="10" fill="#a5b4fc">Users</text>
+  <text x="28" y="140" font-size="10" fill="#a5b4fc">Revenue</text>
+  <text x="28" y="164" font-size="10" fill="#a5b4fc">Analytics</text>
+  <text x="28" y="188" font-size="10" fill="#a5b4fc">Settings</text>
+  <text x="28" y="212" font-size="10" fill="#a5b4fc">Integrations</text>
+
+  <!-- Avatar bottom -->
+  <circle cx="30" cy="312" r="14" fill="#7c3aed" opacity="0.4"/>
+  <text x="30" y="316" font-size="10" fill="#c4b5fd" text-anchor="middle">PJ</text>
+  <text x="52" y="308" font-size="9" font-weight="600" fill="#e0e7ff">Priya Nair</text>
+  <text x="52" y="320" font-size="8" fill="#a5b4fc">Admin</text>
+
+  <!-- Main content -->
+  <!-- Top bar -->
+  <rect x="148" y="0" width="452" height="44" fill="#ffffff"/>
+  <rect x="148" y="43" width="452" height="1" fill="#e2e8f0"/>
+  <text x="165" y="27" font-size="13" font-weight="700" fill="#1e293b">Overview</text>
+  <rect x="496" y="10" width="88" height="24" rx="6" fill="#7c3aed"/>
+  <text x="540" y="26" font-size="9" font-weight="600" fill="#ffffff" text-anchor="middle">+ New Project</text>
+
+  <!-- KPI Cards -->
+  <!-- Total Users -->
+  <rect x="158" y="56" width="96" height="72" rx="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="170" y="74" font-size="9" fill="#64748b">Total Users</text>
+  <text x="170" y="100" font-size="22" font-weight="800" fill="#1e293b">2,841</text>
+  <text x="170" y="116" font-size="8" fill="#22c55e">↑ 12.4%</text>
+
+  <!-- MRR -->
+  <rect x="264" y="56" width="96" height="72" rx="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="276" y="74" font-size="9" fill="#64748b">MRR</text>
+  <text x="276" y="100" font-size="22" font-weight="800" fill="#7c3aed">$8.4k</text>
+  <text x="276" y="116" font-size="8" fill="#22c55e">↑ 8.1%</text>
+
+  <!-- Active -->
+  <rect x="370" y="56" width="96" height="72" rx="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="382" y="74" font-size="9" fill="#64748b">Active Today</text>
+  <text x="382" y="100" font-size="22" font-weight="800" fill="#1e293b">347</text>
+  <text x="382" y="116" font-size="8" fill="#22c55e">↑ 3.2%</text>
+
+  <!-- Churn -->
+  <rect x="476" y="56" width="112" height="72" rx="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="488" y="74" font-size="9" fill="#64748b">Churn Rate</text>
+  <text x="488" y="100" font-size="22" font-weight="800" fill="#1e293b">2.1%</text>
+  <text x="488" y="116" font-size="8" fill="#22c55e">↓ 0.4%</text>
+
+  <!-- Growth chart -->
+  <rect x="158" y="140" width="250" height="140" rx="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="170" y="158" font-size="10" font-weight="600" fill="#1e293b">User Growth</text>
+
+  <!-- Line chart -->
+  <polyline points="175,260 200,248 225,235 250,228 275,215 300,200 325,185 350,175 375,162" fill="none" stroke="#7c3aed" stroke-width="2.5"/>
+  <polyline points="175,260 200,248 225,235 250,228 275,215 300,200 325,185 350,175 375,162 375,270 175,270" fill="#7c3aed" opacity="0.08"/>
+
+  <!-- Chart dots -->
+  <circle cx="375" cy="162" r="4" fill="#7c3aed"/>
+  <circle cx="300" cy="200" r="3" fill="#7c3aed" opacity="0.6"/>
+
+  <!-- X-axis -->
+  <text x="175" y="278" font-size="7" fill="#94a3b8">Jan</text>
+  <text x="225" y="278" font-size="7" fill="#94a3b8">Feb</text>
+  <text x="275" y="278" font-size="7" fill="#94a3b8">Mar</text>
+  <text x="325" y="278" font-size="7" fill="#94a3b8">Apr</text>
+  <text x="373" y="278" font-size="7" fill="#7c3aed" font-weight="600">May</text>
+
+  <!-- Recent signups -->
+  <rect x="420" y="140" width="168" height="140" rx="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="432" y="158" font-size="10" font-weight="600" fill="#1e293b">Recent Signups</text>
+
+  <rect x="430" y="166" width="148" height="22" rx="4" fill="#f8fafc"/>
+  <circle cx="442" cy="177" r="6" fill="#7c3aed" opacity="0.4"/>
+  <text x="442" y="181" font-size="7" fill="#7c3aed" text-anchor="middle">AK</text>
+  <text x="454" y="175" font-size="9" fill="#1e293b">Arjun Kumar</text>
+  <text x="454" y="184" font-size="7" fill="#64748b">Pro Plan · 2m ago</text>
+
+  <rect x="430" y="192" width="148" height="22" rx="4" fill="#f8fafc"/>
+  <circle cx="442" cy="203" r="6" fill="#0ea5e9" opacity="0.4"/>
+  <text x="442" y="207" font-size="7" fill="#0ea5e9" text-anchor="middle">SM</text>
+  <text x="454" y="201" font-size="9" fill="#1e293b">Sarah M.</text>
+  <text x="454" y="210" font-size="7" fill="#64748b">Starter · 14m ago</text>
+
+  <rect x="430" y="218" width="148" height="22" rx="4" fill="#f8fafc"/>
+  <circle cx="442" cy="229" r="6" fill="#22c55e" opacity="0.4"/>
+  <text x="442" y="233" font-size="7" fill="#22c55e" text-anchor="middle">RJ</text>
+  <text x="454" y="227" font-size="9" fill="#1e293b">Raj Joshi</text>
+  <text x="454" y="236" font-size="7" fill="#64748b">Pro Plan · 1h ago</text>
+
+  <rect x="430" y="244" width="148" height="22" rx="4" fill="#f8fafc"/>
+  <circle cx="442" cy="255" r="6" fill="#f59e0b" opacity="0.4"/>
+  <text x="442" y="259" font-size="7" fill="#f59e0b" text-anchor="middle">TL</text>
+  <text x="454" y="253" font-size="9" fill="#1e293b">Tom Lawson</text>
+  <text x="454" y="262" font-size="7" fill="#64748b">Enterprise · 3h ago</text>
+
+  <!-- Footer -->
+  <rect x="148" y="305" width="452" height="35" fill="#f8fafc"/>
+  <rect x="148" y="305" width="452" height="1" fill="#e2e8f0"/>
+  <text x="165" y="326" font-size="8" fill="#94a3b8">Built with Next.js · Laravel · Firebase · Stripe — nlagdhir.in</text>
+</svg>

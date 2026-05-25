@@ -1,0 +1,96 @@
+<svg width="600" height="340" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,sans-serif">
+  <!-- Background -->
+  <rect width="600" height="340" fill="#0f172a"/>
+
+  <!-- Top bar -->
+  <rect width="600" height="44" fill="#1e293b"/>
+  <text x="18" y="27" font-size="13" font-weight="700" fill="#ffffff">Voice AI Dashboard</text>
+  <rect x="450" y="12" width="80" height="20" rx="10" fill="rgba(74,222,128,0.15)"/>
+  <circle cx="463" cy="22" r="4" fill="#4ade80"/>
+  <text x="471" y="26" font-size="9" font-weight="600" fill="#4ade80">Live Agent</text>
+  <rect x="544" y="12" width="44" height="20" rx="4" fill="#334155"/>
+  <text x="566" y="26" font-size="9" fill="#94a3b8" text-anchor="middle">Today</text>
+
+  <!-- Metric cards row -->
+  <!-- Card 1 -->
+  <rect x="12" y="56" width="128" height="70" rx="8" fill="#1e293b"/>
+  <text x="24" y="75" font-size="10" fill="#64748b">Calls Handled</text>
+  <text x="24" y="101" font-size="26" font-weight="800" fill="#ffffff">142</text>
+  <text x="82" y="101" font-size="10" fill="#4ade80">+18%</text>
+
+  <!-- Card 2 -->
+  <rect x="152" y="56" width="128" height="70" rx="8" fill="#1e293b"/>
+  <text x="164" y="75" font-size="10" fill="#64748b">Avg Handle Time</text>
+  <text x="164" y="101" font-size="26" font-weight="800" fill="#60a5fa">1m 42s</text>
+
+  <!-- Card 3 -->
+  <rect x="292" y="56" width="128" height="70" rx="8" fill="#1e293b"/>
+  <text x="304" y="75" font-size="10" fill="#64748b">AI Resolved</text>
+  <text x="304" y="101" font-size="26" font-weight="800" fill="#a78bfa">71%</text>
+
+  <!-- Card 4 -->
+  <rect x="432" y="56" width="156" height="70" rx="8" fill="#1e293b"/>
+  <text x="444" y="75" font-size="10" fill="#64748b">Human Escalations</text>
+  <text x="444" y="101" font-size="26" font-weight="800" fill="#f97316">41</text>
+  <text x="496" y="101" font-size="10" fill="#64748b">/ 142</text>
+
+  <!-- Call volume chart -->
+  <rect x="12" y="140" width="370" height="150" rx="8" fill="#1e293b"/>
+  <text x="24" y="160" font-size="10" font-weight="600" fill="#cbd5e1">Call Volume — Last 12 Hours</text>
+
+  <!-- Chart bars -->
+  <rect x="36"  y="255" width="22" height="20" rx="2" fill="#3b82f6" opacity="0.5"/>
+  <rect x="64"  y="240" width="22" height="35" rx="2" fill="#3b82f6" opacity="0.6"/>
+  <rect x="92"  y="228" width="22" height="47" rx="2" fill="#3b82f6" opacity="0.7"/>
+  <rect x="120" y="215" width="22" height="60" rx="2" fill="#3b82f6"/>
+  <rect x="148" y="220" width="22" height="55" rx="2" fill="#3b82f6"/>
+  <rect x="176" y="205" width="22" height="70" rx="2" fill="#3b82f6"/>
+  <rect x="204" y="198" width="22" height="77" rx="2" fill="#6366f1"/>
+  <rect x="232" y="195" width="22" height="80" rx="2" fill="#6366f1"/>
+  <rect x="260" y="210" width="22" height="65" rx="2" fill="#3b82f6"/>
+  <rect x="288" y="225" width="22" height="50" rx="2" fill="#3b82f6" opacity="0.8"/>
+  <rect x="316" y="235" width="22" height="40" rx="2" fill="#3b82f6" opacity="0.6"/>
+  <rect x="344" y="248" width="22" height="27" rx="2" fill="#3b82f6" opacity="0.5"/>
+
+  <!-- Chart x-axis labels -->
+  <text x="38"  y="275" font-size="7" fill="#475569">6am</text>
+  <text x="148" y="275" font-size="7" fill="#475569">10am</text>
+  <text x="204" y="275" font-size="7" fill="#475569">12pm</text>
+  <text x="288" y="275" font-size="7" fill="#475569">3pm</text>
+  <text x="348" y="275" font-size="7" fill="#475569">5pm</text>
+
+  <!-- Recent calls panel -->
+  <rect x="394" y="140" width="194" height="150" rx="8" fill="#1e293b"/>
+  <text x="406" y="160" font-size="10" font-weight="600" fill="#cbd5e1">Recent Calls</text>
+
+  <!-- Call rows -->
+  <rect x="406" y="168" width="170" height="24" rx="4" fill="#0f172a"/>
+  <circle cx="419" cy="180" r="6" fill="#4ade80" opacity="0.3"/>
+  <circle cx="419" cy="180" r="3" fill="#4ade80"/>
+  <text x="432" y="184" font-size="9" fill="#e2e8f0">+1 555-0148</text>
+  <text x="538" y="184" font-size="8" fill="#64748b">AI ✓</text>
+
+  <rect x="406" y="196" width="170" height="24" rx="4" fill="#0f172a"/>
+  <circle cx="419" cy="208" r="6" fill="#f97316" opacity="0.3"/>
+  <circle cx="419" cy="208" r="3" fill="#f97316"/>
+  <text x="432" y="212" font-size="9" fill="#e2e8f0">+1 555-0293</text>
+  <text x="530" y="212" font-size="8" fill="#f97316">Escalated</text>
+
+  <rect x="406" y="224" width="170" height="24" rx="4" fill="#0f172a"/>
+  <circle cx="419" cy="236" r="6" fill="#4ade80" opacity="0.3"/>
+  <circle cx="419" cy="236" r="3" fill="#4ade80"/>
+  <text x="432" y="240" font-size="9" fill="#e2e8f0">+44 7700 9042</text>
+  <text x="538" y="240" font-size="8" fill="#64748b">AI ✓</text>
+
+  <rect x="406" y="252" width="170" height="24" rx="4" fill="#0f172a"/>
+  <circle cx="419" cy="264" r="6" fill="#4ade80" opacity="0.3"/>
+  <circle cx="419" cy="264" r="3" fill="#4ade80"/>
+  <text x="432" y="268" font-size="9" fill="#e2e8f0">+91 98765 4310</text>
+  <text x="538" y="268" font-size="8" fill="#64748b">AI ✓</text>
+
+  <!-- Footer bar -->
+  <rect x="0" y="305" width="600" height="35" fill="#1e293b"/>
+  <text x="18" y="326" font-size="9" fill="#475569">Built with VAPI · OpenAI · Laravel · nlagdhir.in</text>
+  <rect x="488" y="316" width="96" height="16" rx="8" fill="rgba(99,102,241,0.2)"/>
+  <text x="536" y="327" font-size="8" font-weight="600" fill="#818cf8" text-anchor="middle">Support −70%</text>
+</svg>

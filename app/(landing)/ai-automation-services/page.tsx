@@ -271,26 +271,29 @@ export default function AIAutomationServicesPage() {
                 label: 'WhatsApp Automation',
                 title: 'Automated Customer Support — Shree Trivedi International',
                 desc: 'Replaced manual WhatsApp replies with automated flows for shipment tracking, booking confirmations, and FAQs. Handling 200+ daily customer interactions without extra staff.',
-                gradient: 'from-green-500 to-teal-700',
+                screenshot: '/img/screenshots/whatsapp-automation.svg',
                 tags: ['WhatsApp API', 'Laravel', 'Workflow Automation'],
                 result: '3× faster response time',
+                resultColor: 'bg-green-500',
               },
               {
                 label: 'AI Voice Agent',
                 title: 'AI Voice Agent — Logistics & Courier Company',
                 desc: 'AI-powered voice agent that handles all inbound shipment status enquiries automatically, routing only complex issues to the human support team.',
-                gradient: 'from-blue-600 to-indigo-700',
+                screenshot: '/img/screenshots/voice-ai-dashboard.svg',
                 tags: ['VAPI', 'OpenAI', 'Laravel', 'Custom APIs'],
                 result: '70% reduction in support calls',
+                resultColor: 'bg-blue-600',
               },
             ].map((p) => (
               <div key={p.title} className="bg-white rounded-2xl overflow-hidden border border-slate-100 hover:shadow-xl transition-shadow">
-                <div className={`bg-gradient-to-r ${p.gradient} px-7 py-8 relative overflow-hidden`}>
-                  <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle, white 1px, transparent 1px)', backgroundSize: '20px 20px' }} />
-                  <div className="relative z-10">
-                    <span className="inline-block px-3 py-1 rounded-full bg-white/20 text-white/90 text-xs font-semibold mb-3">{p.label}</span>
-                    <h3 className="text-white font-bold text-lg leading-snug mb-3">{p.title}</h3>
-                    <div className="text-white font-extrabold text-xl">{p.result}</div>
+                <div className="relative">
+                  <img src={p.screenshot} alt={p.title} className="w-full object-cover object-top" style={{ height: '200px' }} />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent flex items-end p-5">
+                    <div>
+                      <span className="inline-block px-2.5 py-1 rounded-full bg-white/15 text-white/90 text-xs font-semibold mb-2">{p.label}</span>
+                      <div className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full ${p.resultColor} text-white text-sm font-bold ml-2`}>{p.result}</div>
+                    </div>
                   </div>
                 </div>
                 <div className="px-7 py-5">

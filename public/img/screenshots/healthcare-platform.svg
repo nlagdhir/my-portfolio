@@ -1,0 +1,95 @@
+<svg width="600" height="340" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,sans-serif">
+  <!-- White background -->
+  <rect width="600" height="340" fill="#fff7f7"/>
+
+  <!-- Top bar -->
+  <rect width="600" height="48" fill="#ffffff" stroke="#fce7f3" stroke-width="0"/>
+  <rect width="600" height="1" y="47" fill="#fce7f3"/>
+  <rect x="16" y="13" width="22" height="22" rx="6" fill="#e11d48"/>
+  <text x="27" y="28" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="700">+</text>
+  <text x="48" y="22" font-size="11" font-weight="700" fill="#1e293b">CareConnect</text>
+  <text x="48" y="35" font-size="8" fill="#94a3b8">Patient Communication Platform</text>
+  <rect x="466" y="13" width="118" height="22" rx="6" fill="#fce7f3"/>
+  <circle cx="479" cy="24" r="4" fill="#e11d48"/>
+  <text x="488" y="28" font-size="9" fill="#e11d48" font-weight="600">12 Active Patients</text>
+
+  <!-- Left panel - patient list -->
+  <rect x="0" y="48" width="195" height="292" fill="#ffffff" stroke="#fce7f3" stroke-width="1"/>
+  <text x="16" y="68" font-size="9" font-weight="600" fill="#64748b">PATIENT LIST</text>
+
+  <!-- Patient rows -->
+  <rect x="8" y="76" width="178" height="40" rx="6" fill="#fff1f2"/>
+  <circle cx="28" cy="96" r="10" fill="#fda4af"/>
+  <text x="28" y="100" font-size="8" fill="#be123c" text-anchor="middle">RJ</text>
+  <text x="46" y="91" font-size="9" font-weight="700" fill="#1e293b">Ramesh Joshi</text>
+  <text x="46" y="104" font-size="7.5" fill="#64748b">Ward 3B · Cardiac</text>
+  <circle cx="176" cy="96" r="4" fill="#22c55e"/>
+
+  <rect x="8" y="122" width="178" height="40" rx="6" fill="#f8fafc"/>
+  <circle cx="28" cy="142" r="10" fill="#bfdbfe"/>
+  <text x="28" y="146" font-size="8" fill="#1d4ed8" text-anchor="middle">KP</text>
+  <text x="46" y="137" font-size="9" font-weight="600" fill="#1e293b">Kavita Patil</text>
+  <text x="46" y="150" font-size="7.5" fill="#64748b">Ward 2A · Ortho</text>
+  <circle cx="176" cy="142" r="4" fill="#94a3b8"/>
+
+  <rect x="8" y="168" width="178" height="40" rx="6" fill="#f8fafc"/>
+  <circle cx="28" cy="188" r="10" fill="#a7f3d0"/>
+  <text x="28" y="192" font-size="8" fill="#065f46" text-anchor="middle">MR</text>
+  <text x="46" y="183" font-size="9" font-weight="600" fill="#1e293b">Mohan Rao</text>
+  <text x="46" y="196" font-size="7.5" fill="#64748b">ICU · Post-Op</text>
+  <circle cx="176" cy="188" r="4" fill="#22c55e"/>
+
+  <rect x="8" y="214" width="178" height="40" rx="6" fill="#f8fafc"/>
+  <circle cx="28" cy="234" r="10" fill="#ddd6fe"/>
+  <text x="28" y="238" font-size="8" fill="#5b21b6" text-anchor="middle">SN</text>
+  <text x="46" y="229" font-size="9" font-weight="600" fill="#1e293b">Seema Nair</text>
+  <text x="46" y="242" font-size="7.5" fill="#64748b">Ward 1C · Maternity</text>
+  <circle cx="176" cy="234" r="4" fill="#22c55e"/>
+
+  <!-- Satisfaction badge -->
+  <rect x="10" y="296" width="176" height="30" rx="6" fill="#fff1f2"/>
+  <text x="24" y="306" font-size="8" fill="#64748b">Patient Satisfaction</text>
+  <text x="24" y="320" font-size="13" font-weight="800" fill="#e11d48">92%</text>
+  <text x="72" y="320" font-size="8" fill="#22c55e">↑ vs previous month</text>
+
+  <!-- Right chat panel -->
+  <rect x="195" y="48" width="405" height="292" fill="#fef2f2" opacity="0.5"/>
+  <rect x="195" y="48" width="405" height="292" fill="transparent"/>
+
+  <!-- Chat header -->
+  <rect x="195" y="48" width="405" height="44" fill="#ffffff" stroke="#fce7f3" stroke-width="1"/>
+  <circle cx="222" cy="70" r="14" fill="#fda4af"/>
+  <text x="222" y="74" font-size="8" fill="#be123c" text-anchor="middle">RJ</text>
+  <text x="244" y="65" font-size="10" font-weight="700" fill="#1e293b">Ramesh Joshi</text>
+  <text x="244" y="78" font-size="8" fill="#64748b">Ward 3B · Family notified</text>
+  <rect x="506" y="57" width="60" height="22" rx="6" fill="#e11d48"/>
+  <text x="536" y="72" font-size="8" font-weight="600" fill="#ffffff" text-anchor="middle">Video Call</text>
+
+  <!-- Messages -->
+  <!-- Family message -->
+  <rect x="207" y="104" width="180" height="38" rx="7" fill="#ffffff" stroke="#fce7f3" stroke-width="1"/>
+  <text x="220" y="119" font-size="9" fill="#1e293b">Hi Doctor, how is dad doing</text>
+  <text x="220" y="133" font-size="9" fill="#1e293b">after the surgery?</text>
+  <text x="220" y="143" font-size="7.5" fill="#94a3b8">Family · 11:23 AM</text>
+
+  <!-- Doctor reply -->
+  <rect x="393" y="152" width="200" height="50" rx="7" fill="#fff1f2" stroke="#fecdd3" stroke-width="1"/>
+  <text x="405" y="167" font-size="9" fill="#1e293b">Ramesh is recovering well.</text>
+  <text x="405" y="181" font-size="9" fill="#1e293b">Vitals are stable. He can</text>
+  <text x="405" y="195" font-size="9" fill="#1e293b">have visitors from 4 PM.</text>
+  <text x="548" y="204" font-size="7.5" fill="#94a3b8">Dr. Sharma</text>
+
+  <!-- Care update card -->
+  <rect x="207" y="214" width="380" height="54" rx="7" fill="#ffffff" stroke="#fce7f3" stroke-width="1"/>
+  <rect x="207" y="214" width="6" height="54" rx="3" fill="#e11d48"/>
+  <text x="224" y="232" font-size="9" font-weight="700" fill="#1e293b">Care Update — 2:30 PM</text>
+  <text x="224" y="246" font-size="8.5" fill="#475569">BP: 124/82 mmHg · Temp: 37.1°C · SpO2: 98%</text>
+  <text x="224" y="260" font-size="8.5" fill="#475569">Medication administered. Next check: 6:00 PM</text>
+
+  <!-- Video call prompt -->
+  <rect x="207" y="280" width="380" height="46" rx="7" fill="#fff1f2"/>
+  <text x="225" y="299" font-size="9" font-weight="600" fill="#e11d48">📹 Family Video Call Scheduled</text>
+  <text x="225" y="313" font-size="8.5" fill="#64748b">Today at 4:00 PM · 15 min slot · Approved by Ward 3B</text>
+  <rect x="512" y="288" width="64" height="22" rx="6" fill="#e11d48"/>
+  <text x="544" y="303" font-size="8" font-weight="600" fill="#ffffff" text-anchor="middle">Join Call</text>
+</svg>

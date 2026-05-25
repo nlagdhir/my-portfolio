@@ -1,0 +1,99 @@
+<svg width="600" height="340" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,sans-serif">
+  <!-- Background -->
+  <rect width="600" height="340" fill="#f0fdfa"/>
+
+  <!-- Header -->
+  <rect width="600" height="48" fill="#0f766e"/>
+  <text x="20" y="20" font-size="11" font-weight="700" fill="#ffffff">ShopFlow</text>
+  <text x="20" y="34" font-size="8" fill="rgba(255,255,255,0.7)">Order Management</text>
+  <rect x="430" y="11" width="80" height="26" rx="6" fill="rgba(255,255,255,0.15)"/>
+  <text x="470" y="28" font-size="9" font-weight="600" fill="#ffffff" text-anchor="middle">+ New Order</text>
+  <rect x="522" y="11" width="62" height="26" rx="6" fill="rgba(255,255,255,0.15)"/>
+  <text x="553" y="28" font-size="9" fill="#ffffff" text-anchor="middle">Export</text>
+
+  <!-- Stats bar -->
+  <rect x="10" y="58" width="130" height="56" rx="7" fill="#ffffff" stroke="#99f6e4" stroke-width="1"/>
+  <text x="22" y="76" font-size="9" fill="#0f766e">Today's Orders</text>
+  <text x="22" y="100" font-size="22" font-weight="800" fill="#134e4a">184</text>
+  <text x="90" y="100" font-size="9" fill="#22c55e">↑ 23%</text>
+
+  <rect x="152" y="58" width="130" height="56" rx="7" fill="#ffffff" stroke="#99f6e4" stroke-width="1"/>
+  <text x="164" y="76" font-size="9" fill="#0f766e">Revenue</text>
+  <text x="164" y="100" font-size="22" font-weight="800" fill="#134e4a">₹1.4L</text>
+
+  <rect x="294" y="58" width="130" height="56" rx="7" fill="#ffffff" stroke="#99f6e4" stroke-width="1"/>
+  <text x="306" y="76" font-size="9" fill="#0f766e">Pending</text>
+  <text x="306" y="100" font-size="22" font-weight="800" fill="#f97316">38</text>
+
+  <rect x="436" y="58" width="152" height="56" rx="7" fill="#ffffff" stroke="#99f6e4" stroke-width="1"/>
+  <text x="448" y="76" font-size="9" fill="#0f766e">WhatsApp Notified</text>
+  <text x="448" y="100" font-size="22" font-weight="800" fill="#134e4a">146</text>
+  <rect x="494" y="88" width="20" height="16" rx="4" fill="#25d366" opacity="0.2"/>
+  <text x="498" y="100" font-size="9" fill="#25d366">💬</text>
+
+  <!-- Table header -->
+  <rect x="10" y="126" width="578" height="28" rx="4" fill="#ccfbf1"/>
+  <text x="22" y="144" font-size="9" font-weight="600" fill="#0f766e">Order ID</text>
+  <text x="110" y="144" font-size="9" font-weight="600" fill="#0f766e">Customer</text>
+  <text x="230" y="144" font-size="9" font-weight="600" fill="#0f766e">Product</text>
+  <text x="360" y="144" font-size="9" font-weight="600" fill="#0f766e">Amount</text>
+  <text x="430" y="144" font-size="9" font-weight="600" fill="#0f766e">Status</text>
+  <text x="520" y="144" font-size="9" font-weight="600" fill="#0f766e">WhatsApp</text>
+
+  <!-- Table rows -->
+  <!-- Row 1 -->
+  <rect x="10" y="154" width="578" height="28" rx="0" fill="#ffffff"/>
+  <rect x="10" y="181" width="578" height="1" fill="#f0fdfa"/>
+  <text x="22" y="172" font-size="9" fill="#0f766e" font-weight="600">#ORD-4821</text>
+  <text x="110" y="172" font-size="9" fill="#1e293b">Amit Patel</text>
+  <text x="230" y="172" font-size="9" fill="#475569">Protein Powder 1kg</text>
+  <text x="360" y="172" font-size="9" fill="#1e293b">₹1,299</text>
+  <rect x="428" y="161" width="60" height="16" rx="8" fill="#dcfce7"/>
+  <text x="458" y="172" font-size="8" fill="#16a34a" text-anchor="middle">Shipped</text>
+  <circle cx="534" cy="169" r="5" fill="#25d366"/>
+  <text x="544" y="173" font-size="8" fill="#16a34a">Sent</text>
+
+  <!-- Row 2 -->
+  <rect x="10" y="182" width="578" height="28" fill="#f8fffe"/>
+  <rect x="10" y="209" width="578" height="1" fill="#f0fdfa"/>
+  <text x="22" y="200" font-size="9" fill="#0f766e" font-weight="600">#ORD-4820</text>
+  <text x="110" y="200" font-size="9" fill="#1e293b">Sunita Mehta</text>
+  <text x="230" y="200" font-size="9" fill="#475569">Yoga Mat + Blocks</text>
+  <text x="360" y="200" font-size="9" fill="#1e293b">₹2,100</text>
+  <rect x="428" y="189" width="60" height="16" rx="8" fill="#fef3c7"/>
+  <text x="458" y="200" font-size="8" fill="#d97706" text-anchor="middle">Packing</text>
+  <circle cx="534" cy="197" r="5" fill="#25d366"/>
+  <text x="544" y="201" font-size="8" fill="#16a34a">Sent</text>
+
+  <!-- Row 3 -->
+  <rect x="10" y="210" width="578" height="28" fill="#ffffff"/>
+  <rect x="10" y="237" width="578" height="1" fill="#f0fdfa"/>
+  <text x="22" y="228" font-size="9" fill="#0f766e" font-weight="600">#ORD-4819</text>
+  <text x="110" y="228" font-size="9" fill="#1e293b">Raj Kumar</text>
+  <text x="230" y="228" font-size="9" fill="#475569">Resistance Bands Set</text>
+  <text x="360" y="228" font-size="9" fill="#1e293b">₹899</text>
+  <rect x="428" y="217" width="60" height="16" rx="8" fill="#fee2e2"/>
+  <text x="458" y="228" font-size="8" fill="#dc2626" text-anchor="middle">Pending</text>
+  <text x="530" y="228" font-size="8" fill="#94a3b8">Queued</text>
+
+  <!-- Row 4 -->
+  <rect x="10" y="238" width="578" height="28" fill="#f8fffe"/>
+  <rect x="10" y="265" width="578" height="1" fill="#f0fdfa"/>
+  <text x="22" y="256" font-size="9" fill="#0f766e" font-weight="600">#ORD-4818</text>
+  <text x="110" y="256" font-size="9" fill="#1e293b">Priti Shah</text>
+  <text x="230" y="256" font-size="9" fill="#475569">Dumbbells 10kg Pair</text>
+  <text x="360" y="256" font-size="9" fill="#1e293b">₹3,450</text>
+  <rect x="428" y="245" width="60" height="16" rx="8" fill="#dcfce7"/>
+  <text x="458" y="256" font-size="8" fill="#16a34a" text-anchor="middle">Delivered</text>
+  <circle cx="534" cy="253" r="5" fill="#25d366"/>
+  <text x="544" y="257" font-size="8" fill="#16a34a">Sent</text>
+
+  <!-- WhatsApp panel at bottom -->
+  <rect x="10" y="278" width="578" height="52" rx="7" fill="#ffffff" stroke="#99f6e4" stroke-width="1"/>
+  <circle cx="30" cy="304" r="12" fill="#25d366"/>
+  <text x="30" y="308" font-size="10" fill="#ffffff" text-anchor="middle">💬</text>
+  <text x="52" y="299" font-size="10" font-weight="600" fill="#134e4a">WhatsApp Automation Active</text>
+  <text x="52" y="313" font-size="8.5" fill="#64748b">Order confirmations, tracking updates and delivery alerts sent automatically.</text>
+  <rect x="490" y="290" width="90" height="24" rx="6" fill="#25d366"/>
+  <text x="535" y="306" font-size="9" font-weight="600" fill="#ffffff" text-anchor="middle">View Flows →</text>
+</svg>

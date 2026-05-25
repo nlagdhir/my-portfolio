@@ -271,26 +271,29 @@ export default function StartupMVPDevelopmentPage() {
                 label: 'SaaS MVP',
                 title: 'B2B SaaS Platform — From Notion Doc to Live Product',
                 desc: 'Full-stack SaaS MVP built in under 7 weeks — user auth, subscription billing, core product workflows, and a clean onboarding flow ready for first users.',
-                gradient: 'from-violet-600 to-purple-800',
+                screenshot: '/img/screenshots/saas-mvp-dashboard.svg',
                 tags: ['Next.js', 'Laravel', 'Firebase', 'Stripe'],
                 result: 'Live in 7 weeks',
+                resultColor: 'bg-violet-600',
               },
               {
                 label: 'E-commerce MVP',
                 title: 'D2C E-commerce Platform — Custom-Built for Growth',
                 desc: 'Replaced a generic Shopify setup with a custom platform tailored to the brand\'s fulfillment workflow — integrated with WhatsApp for order updates and support.',
-                gradient: 'from-teal-500 to-cyan-700',
+                screenshot: '/img/screenshots/ecommerce-platform.svg',
                 tags: ['Next.js', 'Laravel', 'WhatsApp API', 'PostgreSQL'],
                 result: '40% lower per-order cost',
+                resultColor: 'bg-teal-600',
               },
             ].map((p) => (
               <div key={p.title} className="bg-white rounded-2xl overflow-hidden border border-slate-100 hover:shadow-xl transition-shadow">
-                <div className={`bg-gradient-to-r ${p.gradient} px-7 py-8 relative overflow-hidden`}>
-                  <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle, white 1px, transparent 1px)', backgroundSize: '20px 20px' }} />
-                  <div className="relative z-10">
-                    <span className="inline-block px-3 py-1 rounded-full bg-white/20 text-white/90 text-xs font-semibold mb-3">{p.label}</span>
-                    <h3 className="text-white font-bold text-lg leading-snug mb-3">{p.title}</h3>
-                    <div className="text-white font-extrabold text-xl">{p.result}</div>
+                <div className="relative">
+                  <img src={p.screenshot} alt={p.title} className="w-full object-cover object-top" style={{ height: '200px' }} />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent flex items-end p-5">
+                    <div>
+                      <span className="inline-block px-2.5 py-1 rounded-full bg-white/15 text-white/90 text-xs font-semibold mb-2">{p.label}</span>
+                      <div className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full ${p.resultColor} text-white text-sm font-bold ml-2`}>{p.result}</div>
+                    </div>
                   </div>
                 </div>
                 <div className="px-7 py-5">
