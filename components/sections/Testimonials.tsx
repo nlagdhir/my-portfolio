@@ -6,30 +6,30 @@ import { HiStar } from 'react-icons/hi'
 const testimonials = [
   {
     quote:
-      'Nilesh delivered our logistics CRM on time and with capabilities we didn\'t even know we needed. The AI voice agent has genuinely reduced our support calls — our team is more productive now.',
+      'We were handling 200+ customer queries daily on WhatsApp manually — it was a mess. Nilesh built an automation that manages order updates, FAQs, and follow-ups instantly. Response time dropped from hours to seconds and our support team can finally focus on things that need a real person.',
+    name: 'Rahul Desai',
+    role: 'Co-Founder',
+    company: 'D2C Brand · Mumbai, India',
+    initials: 'RD',
+    color: 'from-orange-500 to-orange-600',
+  },
+  {
+    quote:
+      'We had a solid idea but needed someone who could build fast without cutting corners. Nilesh delivered our entire MVP in under 7 weeks — on budget, no surprises. What stood out was how clearly he explained every decision. Felt like a proper business partner, not just a developer.',
+    name: 'Priya Nair',
+    role: 'Product Lead',
+    company: 'SaaS Startup · Bengaluru, India',
+    initials: 'PN',
+    color: 'from-rose-500 to-rose-600',
+  },
+  {
+    quote:
+      'Nilesh built our dispatch management platform with an AI voice agent that handles routine driver calls automatically. Our ops team was fielding 80+ calls a day — that number has dropped by more than half. Great work, great communication throughout the project.',
     name: 'Michael R.',
     role: 'Operations Director',
-    company: 'Courier Services, USA',
+    company: 'Logistics Services · USA',
     initials: 'MR',
     color: 'from-blue-500 to-blue-700',
-  },
-  {
-    quote:
-      'We went from a Notion doc to a live MVP in 6 weeks. Nilesh understood exactly what we needed to validate our concept quickly, without overbuilding. Exceptional communication throughout.',
-    name: 'Sarah K.',
-    role: 'Co-Founder',
-    company: 'SaaS Startup, Canada',
-    initials: 'SK',
-    color: 'from-violet-500 to-violet-700',
-  },
-  {
-    quote:
-      'The WhatsApp automation Nilesh built has transformed our lead management. Response times dropped from hours to seconds and conversion improved significantly. Worth every penny.',
-    name: 'James T.',
-    role: 'Sales Manager',
-    company: 'E-commerce Business, UK',
-    initials: 'JT',
-    color: 'from-teal-500 to-teal-700',
   },
 ]
 
