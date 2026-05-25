@@ -1,11 +1,17 @@
 import type { Metadata } from 'next'
+import TrustBar from '@/components/landing/TrustBar'
+import WhyWorkWithMeLanding from '@/components/landing/WhyWorkWithMeLanding'
+import MiddleCTA from '@/components/landing/MiddleCTA'
 
 export const metadata: Metadata = {
   title: 'Custom Web Application Development – Laravel & Next.js | Nilesh Lagdhir',
   description:
     'Custom web applications built with Laravel, Next.js, and React. CRMs, customer portals, SaaS platforms, and internal tools. 12+ years experience.',
-  alternates: {
-    canonical: '/custom-web-application-development',
+  alternates: { canonical: '/custom-web-application-development' },
+  openGraph: {
+    title: 'Custom Web Application Development – Laravel & Next.js',
+    description: 'Custom web applications built with Laravel, Next.js, and React.',
+    url: '/custom-web-application-development',
   },
 }
 
@@ -13,74 +19,85 @@ const CALENDLY = 'https://calendly.com/nilesh-nlagdhir'
 const WHATSAPP = 'https://wa.me/919510110198'
 
 const appTypes = [
-  {
-    icon: '🗃️',
-    title: 'CRMs & Sales Portals',
-    description: 'Built around your sales process, not a generic template.',
-  },
-  {
-    icon: '📦',
-    title: 'Operations Management Systems',
-    description: 'End-to-end visibility over your inventory, logistics, or service delivery.',
-  },
-  {
-    icon: '👤',
-    title: 'Customer Portals & Dashboards',
-    description: 'Self-service portals that reduce support load and improve retention.',
-  },
-  {
-    icon: '⚙️',
-    title: 'SaaS Platforms',
-    description: 'Multi-tenant products with billing, onboarding, and user management built in.',
-  },
-  {
-    icon: '📅',
-    title: 'Booking & Scheduling Systems',
-    description: 'Real-time availability, automated reminders, and calendar sync.',
-  },
-  {
-    icon: '🛠️',
-    title: 'Internal Tools & Admin Panels',
-    description: 'Purpose-built dashboards that eliminate spreadsheet chaos.',
-  },
+  { icon: '🗃️', title: 'CRMs & Sales Portals', description: 'Built around your sales process, not a generic template.' },
+  { icon: '📦', title: 'Operations Management Systems', description: 'End-to-end visibility over your inventory, logistics, or service delivery.' },
+  { icon: '👤', title: 'Customer Portals & Dashboards', description: 'Self-service portals that reduce support load and improve retention.' },
+  { icon: '⚙️', title: 'SaaS Platforms', description: 'Multi-tenant products with billing, onboarding, and user management built in.' },
+  { icon: '📅', title: 'Booking & Scheduling Systems', description: 'Real-time availability, automated reminders, and calendar sync.' },
+  { icon: '🛠️', title: 'Internal Tools & Admin Panels', description: 'Purpose-built dashboards that eliminate spreadsheet chaos.' },
 ]
 
 const processSteps = [
-  {
-    num: '01',
-    title: 'Requirements & Discovery',
-    description:
-      'We map your workflows, user roles, and data requirements. I ask the questions most developers skip — so the system fits your business from day one.',
-  },
-  {
-    num: '02',
-    title: 'System Architecture',
-    description:
-      'Database schema, API design, and infrastructure decisions. Built for performance and maintainability, not just the immediate feature set.',
-  },
-  {
-    num: '03',
-    title: 'Development',
-    description:
-      'Iterative sprints with weekly demos. You see real progress throughout, not a big reveal at the end.',
-  },
-  {
-    num: '04',
-    title: 'QA & Testing',
-    description:
-      'Functional, load, and security testing before any production deployment. Edge cases identified and handled.',
-  },
-  {
-    num: '05',
-    title: 'Deployment & Handover',
-    description:
-      'Production deployment, monitoring setup, and full documentation. Your team can own and operate the application independently.',
-  },
+  { num: '01', title: 'Requirements & Discovery', description: 'We map your workflows, user roles, and data requirements. I ask the questions most developers skip — so the system fits your business from day one.' },
+  { num: '02', title: 'System Architecture', description: 'Database schema, API design, and infrastructure decisions. Built for performance and maintainability, not just the immediate feature set.' },
+  { num: '03', title: 'Development', description: 'Iterative sprints with weekly demos. You see real progress throughout, not a big reveal at the end.' },
+  { num: '04', title: 'QA & Testing', description: 'Functional, load, and security testing before any production deployment. Edge cases identified and handled.' },
+  { num: '05', title: 'Deployment & Handover', description: 'Production deployment, monitoring setup, and full documentation. Your team can own and operate the application independently.' },
 ]
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'How much does custom web application development cost?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Pricing depends on the scope and complexity. I provide a fixed-price proposal after a discovery call — no hourly billing and no surprise invoices. You know the full cost before any work starts.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How long does a custom web application take to build?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Timelines vary with complexity. A focused internal tool might take 4–6 weeks. A full SaaS platform with multi-tenancy and billing typically runs 3–5 months. After your discovery call, I provide a scoped estimate with a clear timeline.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do you work with clients outside India?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. I work with clients in the USA, UK, Canada, and Australia. I work across time zones, provide weekly video updates, and am reachable on WhatsApp for quick questions.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can you sign an NDA?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. I sign NDAs before any discovery call where sensitive business information is shared.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can you work with our existing systems or database?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Most projects involve integrating with existing CRMs, ERPs, payment gateways, or legacy databases. I assess what is there on the discovery call and factor that into the architecture plan.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do you provide hosting and maintenance?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'I handle deployment and recommend the right hosting setup for your needs. For ongoing maintenance — feature additions, security updates, bug fixes — I offer retainer arrangements at a fixed monthly cost.',
+      },
+    },
+  ],
+}
 
 export default function CustomWebApplicationDevelopmentPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+
       {/* ── Hero ─────────────────────────────────────────────── */}
       <section className="bg-slate-950 pt-28 pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -98,32 +115,47 @@ export default function CustomWebApplicationDevelopmentPage() {
             how your business actually operates — so the tools serve you, not the other way round.
           </p>
 
+          {/* Top CTA */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href={CALENDLY}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-blue-600 text-white font-semibold text-lg hover:bg-blue-700 transition-colors"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-blue-600 to-violet-600 text-white font-bold text-lg hover:opacity-90 transition-opacity shadow-lg"
             >
-              Discuss Your Project
+              📅 Book Free Consultation
             </a>
             <a
               href="#what-i-build"
               className="inline-flex items-center justify-center px-8 py-4 rounded-xl border border-slate-700 text-slate-300 font-semibold text-lg hover:border-slate-500 hover:text-white transition-colors"
             >
-              See My Work
+              See What I Build
+            </a>
+          </div>
+
+          {/* WhatsApp secondary CTA */}
+          <div className="mt-5 flex items-center justify-center gap-2 text-slate-500">
+            <span className="text-sm">or</span>
+            <a
+              href={WHATSAPP}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-sm font-medium text-green-400 hover:text-green-300 transition-colors"
+            >
+              💬 Prefer chatting? Message on WhatsApp
             </a>
           </div>
         </div>
       </section>
 
+      {/* ── Trust Bar ────────────────────────────────────────── */}
+      <TrustBar />
+
       {/* ── What I Build ─────────────────────────────────────── */}
       <section id="what-i-build" className="bg-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
-            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
-              Applications Built for Real Business Problems
-            </h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">Applications Built for Real Business Problems</h2>
             <p className="text-lg text-slate-600 max-w-xl mx-auto">
               Every project is different. Here are the types of applications I build most often.
             </p>
@@ -131,10 +163,7 @@ export default function CustomWebApplicationDevelopmentPage() {
 
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
             {appTypes.map(({ icon, title, description }) => (
-              <div
-                key={title}
-                className="rounded-2xl border border-slate-100 bg-slate-50 p-6 hover:border-blue-200 hover:bg-blue-50/30 transition-colors"
-              >
+              <div key={title} className="rounded-2xl border border-slate-100 bg-slate-50 p-6 hover:border-blue-200 hover:bg-blue-50/30 transition-colors">
                 <div className="text-3xl mb-3">{icon}</div>
                 <h3 className="font-bold text-slate-900 mb-2">{title}</h3>
                 <p className="text-sm text-slate-600 leading-relaxed">{description}</p>
@@ -148,21 +177,15 @@ export default function CustomWebApplicationDevelopmentPage() {
       <section className="bg-slate-50 py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
-              Modern, Proven Technologies
-            </h2>
-            <p className="text-lg text-slate-600">
-              I choose the right tool for your specific needs, not the trendiest one.
-            </p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">Modern, Proven Technologies</h2>
+            <p className="text-lg text-slate-600">I choose the right tool for your specific needs, not the trendiest one.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-white rounded-2xl border border-slate-100 p-8">
               <h3 className="text-lg font-bold text-slate-900 mb-5 flex items-center gap-2">
-                <span className="w-8 h-8 rounded-lg bg-blue-100 text-blue-700 flex items-center justify-center text-sm font-bold">
-                  BE
-                </span>
-                Backend
+                <span className="w-8 h-8 rounded-lg bg-blue-100 text-blue-700 flex items-center justify-center text-sm font-bold">BE</span>
+                {' '}Backend
               </h3>
               <ul className="space-y-3">
                 {['Laravel (PHP)', 'Node.js', 'REST APIs', 'MySQL / PostgreSQL'].map((tech) => (
@@ -176,10 +199,8 @@ export default function CustomWebApplicationDevelopmentPage() {
 
             <div className="bg-white rounded-2xl border border-slate-100 p-8">
               <h3 className="text-lg font-bold text-slate-900 mb-5 flex items-center gap-2">
-                <span className="w-8 h-8 rounded-lg bg-violet-100 text-violet-700 flex items-center justify-center text-sm font-bold">
-                  FE
-                </span>
-                Frontend
+                <span className="w-8 h-8 rounded-lg bg-violet-100 text-violet-700 flex items-center justify-center text-sm font-bold">FE</span>
+                {' '}Frontend
               </h3>
               <ul className="space-y-3">
                 {['Next.js', 'React', 'TypeScript', 'Tailwind CSS'].map((tech) => (
@@ -198,12 +219,8 @@ export default function CustomWebApplicationDevelopmentPage() {
       <section className="bg-white py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
-            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
-              How We Work Together
-            </h2>
-            <p className="text-lg text-slate-600">
-              A structured process that eliminates ambiguity and keeps your project on track.
-            </p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">How We Work Together</h2>
+            <p className="text-lg text-slate-600">A structured process that eliminates ambiguity and keeps your project on track.</p>
           </div>
 
           <div className="space-y-6">
@@ -213,9 +230,7 @@ export default function CustomWebApplicationDevelopmentPage() {
                   <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-600 to-violet-600 flex items-center justify-center text-white font-extrabold text-xs">
                     {num}
                   </div>
-                  {i < processSteps.length - 1 && (
-                    <div className="w-0.5 h-12 bg-slate-200 mt-2" />
-                  )}
+                  {i < processSteps.length - 1 && <div className="w-0.5 h-12 bg-slate-200 mt-2" />}
                 </div>
                 <div className="pb-2">
                   <h3 className="text-lg font-bold text-slate-900 mb-1">{title}</h3>
@@ -227,15 +242,17 @@ export default function CustomWebApplicationDevelopmentPage() {
         </div>
       </section>
 
+      {/* ── Middle CTA ───────────────────────────────────────── */}
+      <MiddleCTA
+        headline="Have a project in mind? Let's talk."
+        subtext="Book a free consultation and we will walk through your requirements, the right tech choices, and a realistic timeline."
+        primaryText="Book Free Consultation"
+      />
+
       {/* ── Testimonial ───────────────────────────────────────── */}
-      <section className="bg-slate-50 py-16">
+      <section className="bg-white py-16">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <svg
-            className="mx-auto mb-6 text-blue-600 w-10 h-10 opacity-60"
-            fill="currentColor"
-            viewBox="0 0 32 32"
-            aria-hidden="true"
-          >
+          <svg className="mx-auto mb-6 text-blue-600 w-10 h-10 opacity-60" fill="currentColor" viewBox="0 0 32 32" aria-hidden="true">
             <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
           </svg>
           <blockquote className="text-xl sm:text-2xl text-slate-700 font-medium leading-relaxed mb-8">
@@ -245,49 +262,51 @@ export default function CustomWebApplicationDevelopmentPage() {
             project."
           </blockquote>
           <p className="font-semibold text-slate-900">Michael R.</p>
-          <p className="text-sm text-slate-500 mt-1">
-            Operations Director, Logistics Services, USA
-          </p>
+          <p className="text-sm text-slate-500 mt-1">Operations Director, Logistics Services, USA</p>
         </div>
       </section>
+
+      {/* ── Why Work With Me ─────────────────────────────────── */}
+      <WhyWorkWithMeLanding />
 
       {/* ── FAQ ───────────────────────────────────────────────── */}
       <section className="bg-white py-20">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
-              Frequently Asked Questions
-            </h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">Frequently Asked Questions</h2>
           </div>
 
           <div className="space-y-4">
             {[
               {
+                q: 'How much does custom web application development cost?',
+                a: 'Pricing depends on the scope and complexity. I provide a fixed-price proposal after a discovery call — no hourly billing and no surprise invoices. You know the full cost before any work starts.',
+              },
+              {
                 q: 'How long does a custom web application take to build?',
-                a: "Timelines vary with complexity. A focused internal tool might take 4–6 weeks. A full SaaS platform with multi-tenancy and billing typically runs 3–5 months. After your discovery call, I'll provide a scoped estimate with a clear timeline you can plan around.",
+                a: 'Timelines vary with complexity. A focused internal tool might take 4–6 weeks. A full SaaS platform typically runs 3–5 months. After your discovery call, I provide a scoped estimate with a clear timeline.',
+              },
+              {
+                q: 'Do you work with clients outside India?',
+                a: 'Yes. I work with clients in the USA, UK, Canada, and Australia. I work across time zones and provide weekly video updates so you are always in the loop.',
+              },
+              {
+                q: 'Can you sign an NDA?',
+                a: 'Yes. I sign NDAs before any discovery call where sensitive business information is shared.',
               },
               {
                 q: 'Can you work with our existing systems or database?',
-                a: "Yes. Most projects involve integrating with existing CRMs, ERPs, payment gateways, or legacy databases. I'll assess what's there on the discovery call and factor that into the architecture plan.",
+                a: 'Yes. Most projects involve integrating with existing CRMs, ERPs, payment gateways, or legacy databases. I assess what is there on the discovery call and factor that into the architecture plan.',
               },
               {
                 q: 'Do you provide hosting and maintenance?',
-                a: 'I handle deployment and can recommend the right hosting setup for your needs. For ongoing maintenance — feature additions, security updates, bug fixes — I offer retainer arrangements at a fixed monthly cost.',
-              },
-              {
-                q: 'Laravel vs Next.js — which one do you recommend?',
-                a: "It depends on your project. Laravel is excellent for data-heavy backends with complex business logic, role-based permissions, and admin systems. Next.js is ideal when you need a fast, SEO-friendly frontend or a full-stack app with modern tooling. Many projects use both — Laravel as the API layer and Next.js on the frontend. I'll recommend the right combination for your specific situation.",
+                a: 'I handle deployment and recommend the right hosting setup for your needs. For ongoing maintenance — feature additions, security updates, bug fixes — I offer retainer arrangements at a fixed monthly cost.',
               },
             ].map(({ q, a }) => (
-              <details
-                key={q}
-                className="group border border-slate-200 rounded-xl overflow-hidden"
-              >
+              <details key={q} className="group border border-slate-200 rounded-xl overflow-hidden">
                 <summary className="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer list-none font-semibold text-slate-900 hover:bg-slate-50 transition-colors">
                   {q}
-                  <span className="shrink-0 text-slate-400 group-open:rotate-180 transition-transform duration-200">
-                    ▼
-                  </span>
+                  <span className="shrink-0 text-slate-400 group-open:rotate-180 transition-transform duration-200">▼</span>
                 </summary>
                 <div className="px-6 pb-5 pt-1 text-slate-600 leading-relaxed">{a}</div>
               </details>
@@ -296,38 +315,35 @@ export default function CustomWebApplicationDevelopmentPage() {
         </div>
       </section>
 
-      {/* ── Final CTA ─────────────────────────────────────────── */}
+      {/* ── Bottom CTA ────────────────────────────────────────── */}
       <section className="bg-slate-950 py-20">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-5">
             Let's Build Something That Works for You
           </h2>
-          <p className="text-lg text-slate-400 mb-10 max-w-xl mx-auto">
-            Tell me about your project. We'll talk through the requirements, the right technology
+          <p className="text-lg text-slate-400 mb-8 max-w-xl mx-auto">
+            Tell me about your project. We will talk through the requirements, the right technology
             choices, and what a realistic timeline and budget looks like.
           </p>
-          <a
-            href={CALENDLY}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center px-10 py-4 rounded-xl bg-blue-600 text-white font-semibold text-lg hover:bg-blue-700 transition-colors"
-          >
-            Discuss Your Project
-          </a>
-          <p className="mt-6 text-sm text-slate-500">
-            Free consultation. No commitment required.
-          </p>
-          <p className="mt-4 text-sm text-slate-600">
-            Prefer WhatsApp?{' '}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href={CALENDLY}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 px-10 py-4 rounded-xl bg-gradient-to-r from-blue-600 to-violet-600 text-white font-bold text-lg hover:opacity-90 transition-opacity shadow-lg"
+            >
+              📅 Book Free Consultation
+            </a>
             <a
               href={WHATSAPP}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-green-400 hover:text-green-300 underline"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-green-500/10 border border-green-500/30 text-green-400 font-semibold text-base hover:bg-green-500/20 transition-colors"
             >
-              Message me directly
+              💬 Message on WhatsApp
             </a>
-          </p>
+          </div>
+          <p className="mt-6 text-sm text-slate-600">Free consultation. No commitment required.</p>
         </div>
       </section>
     </>
