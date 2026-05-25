@@ -31,7 +31,7 @@ const appTypes = [
 const processSteps = [
   { num: '01', title: 'Requirements & Discovery', description: 'We map your workflows, user roles, and data requirements. I ask the questions most developers skip — so the system fits your business from day one.' },
   { num: '02', title: 'System Architecture', description: 'Database schema, API design, and infrastructure decisions. Built for performance and maintainability, not just the immediate feature set.' },
-  { num: '03', title: 'Development', description: 'Iterative sprints with weekly demos. You see real progress throughout, not a big reveal at the end.' },
+  { num: '03', title: 'Development', description: 'My team works in iterative sprints with weekly demos. You see real progress throughout — not a big reveal at the end.' },
   { num: '04', title: 'QA & Testing', description: 'Functional, load, and security testing before any production deployment. Edge cases identified and handled.' },
   { num: '05', title: 'Deployment & Handover', description: 'Production deployment, monitoring setup, and full documentation. Your team can own and operate the application independently.' },
 ]
@@ -112,8 +112,9 @@ export default function CustomWebApplicationDevelopmentPage() {
           </h1>
 
           <p className="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto mb-10">
-            Off-the-shelf software forces your team to work around it. I build applications around
-            how your business actually operates — so the tools serve you, not the other way round.
+            Off-the-shelf software forces your team to work around it. My team and I build
+            applications around how your business actually operates — so the tools serve you, not
+            the other way round.
           </p>
 
           {/* Top CTA */}

@@ -95,8 +95,8 @@ export default function AIAutomationServicesPage() {
           </h1>
 
           <p className="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto mb-10">
-            I build AI systems that handle customer queries, chase down leads, and manage internal
-            workflows — around the clock, without hiring more staff.
+            My team and I build AI systems that handle customer queries, chase down leads, and manage
+            internal workflows — around the clock, without hiring more staff.
           </p>
 
           {/* Top CTA */}
@@ -236,7 +236,7 @@ export default function AIAutomationServicesPage() {
               {
                 step: '02',
                 title: 'Build & Integrate',
-                description: 'I design and build the automation, connecting it directly to your existing tools — CRM, WhatsApp, phone system, booking platform, or anything else you use.',
+                description: 'My team designs and builds the automation, connecting it directly to your existing tools — CRM, WhatsApp, phone system, booking platform, or anything else you use.',
               },
               {
                 step: '03',
@@ -389,7 +389,7 @@ export default function AIAutomationServicesPage() {
               <a href="https://strivediservices.com" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
                 Shree Trivedi International
               </a>
-              , Ahmedabad
+              {', '}Ahmedabad
             </p>
             <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-green-100 text-green-700 text-xs font-semibold">
               ✓ Verified Client

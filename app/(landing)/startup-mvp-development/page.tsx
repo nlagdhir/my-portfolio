@@ -107,8 +107,8 @@ export default function StartupMVPDevelopmentPage() {
           </h1>
 
           <p className="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto mb-10">
-            I help startup founders go from idea to live product fast — with clean architecture,
-            scalable code, and a process that keeps you informed every step of the way.
+            My team and I help startup founders go from idea to live product fast — with clean
+            architecture, scalable code, and a process that keeps you informed every step of the way.
           </p>
 
           {/* Top CTA */}
@@ -225,7 +225,7 @@ export default function StartupMVPDevelopmentPage() {
               {
                 weeks: 'Week 3–5',
                 phase: 'Core Development',
-                description: 'Build the core product features — APIs, data models, authentication, and primary user flows. Weekly demos keep you in the loop.',
+                description: 'My team builds the core product features — APIs, data models, authentication, and primary user flows. Weekly demos keep you in the loop.',
               },
               {
                 weeks: 'Week 6–7',

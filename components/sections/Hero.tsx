@@ -69,8 +69,8 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="text-lg md:text-xl text-slate-400 leading-relaxed mb-10 max-w-3xl mx-auto"
           >
-            Helping startups and businesses develop custom web applications, AI-powered automation
-            systems, WhatsApp solutions, voice agents, and scalable software products.
+            My team and I help startups and businesses develop custom web applications, AI-powered
+            automation systems, WhatsApp solutions, voice agents, and scalable software products.
           </motion.p>
 
           {/* CTA Buttons */}

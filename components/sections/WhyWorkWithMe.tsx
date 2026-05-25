@@ -32,7 +32,7 @@ const valueProps = [
     icon: HiChatBubbleLeftRight,
     title: 'Fast, Clear Communication',
     description:
-      'You get direct access — no account managers, no layers. Questions answered same-day. Updates shared proactively, not on request.',
+      'You deal directly with me — not a project manager or junior. My team handles execution; I handle communication. Questions answered same-day, updates shared proactively.',
     color: 'text-green-500',
     bg: 'bg-green-50',
   },
@@ -63,7 +63,7 @@ const valueProps = [
 ]
 
 const highlights = [
-  '7+ years building production-grade applications',
+  '12+ years building production-grade applications',
   'Clients in USA, Canada, UK & Australia',
   'Cross-industry experience: logistics, healthcare, e-commerce, SaaS',
   'AI & automation specialist since 2022',
@@ -91,8 +91,9 @@ export default function WhyWorkWithMe() {
               Not Just a Developer
             </h2>
             <p className="text-slate-500 text-base leading-relaxed mb-8">
-              I work with founders and business owners who need someone they can trust to build the
-              right thing, the right way — and communicate clearly throughout.
+              I work with founders and business owners alongside a vetted development team. You get
+              direct access to me throughout — no account managers, no hand-offs, clear communication
+              from first call to launch.
             </p>
 
             {/* Highlights */}

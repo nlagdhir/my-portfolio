@@ -1,8 +1,13 @@
 const points = [
   {
     icon: '💬',
-    title: 'Direct communication with the developer',
-    desc: 'You speak with me — not an account manager or junior dev. Every question gets a same-day response.',
+    title: 'You deal with me — not a project manager',
+    desc: 'I am your single point of contact throughout. Every question gets a same-day response, directly from me.',
+  },
+  {
+    icon: '👥',
+    title: 'Backed by a specialist dev team',
+    desc: 'Behind the scenes, a vetted team of backend developers, UI engineers, and QA specialists deliver the work — no single point of failure.',
   },
   {
     icon: '📅',
@@ -12,12 +17,12 @@ const points = [
   {
     icon: '🌏',
     title: 'Flexible timezone overlap',
-    desc: 'I work with clients in the USA, UK, Canada, and Australia. Calls and deadlines adapt to your timezone.',
+    desc: 'We work with clients in the USA, UK, Canada, and Australia. Calls and deadlines adapt to your timezone.',
   },
   {
     icon: '🔧',
     title: 'Long-term support',
-    desc: "The relationship doesn't end at launch. I provide ongoing maintenance and development as your product grows.",
+    desc: "The relationship doesn't end at launch. We provide ongoing maintenance and development as your product grows.",
   },
   {
     icon: '📈',
@@ -43,7 +48,7 @@ export default function WhyWorkWithMeLanding() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-4xl mx-auto">
           {points.map(({ icon, title, desc }) => (
             <div
               key={title}
