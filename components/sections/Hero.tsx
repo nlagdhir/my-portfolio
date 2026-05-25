@@ -5,7 +5,7 @@ import { HiCalendar, HiArrowRight, HiCheckCircle } from 'react-icons/hi'
 import { FaWhatsapp } from 'react-icons/fa'
 
 const trustBadges = [
-  { label: '7+ Years Experience' },
+  { label: '12+ Years Experience' },
   { label: '100+ Projects Supported' },
   { label: 'React, Next.js, Laravel & AI' },
   { label: 'Global Client Experience' },

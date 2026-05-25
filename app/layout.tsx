@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     template: '%s | Nilesh Lagdhir',
   },
   description:
-    'Helping startups and businesses build custom web applications, AI-powered automation systems, WhatsApp solutions, voice agents, and scalable software products. 7+ years experience, 100+ projects delivered.',
+    'Helping startups and businesses build custom web applications, AI-powered automation systems, WhatsApp solutions, voice agents, and scalable software products. 12+ years experience, 100+ projects delivered.',
   keywords: [
     'Web Development Services',
     'Next.js Development',

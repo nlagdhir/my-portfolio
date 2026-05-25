@@ -155,7 +155,7 @@ export function GET() {
           {/* Stats row */}
           <div style={{ display: 'flex', gap: '32px', marginBottom: '28px' }}>
             {[
-              { value: '7+', label: 'Years Exp.' },
+              { value: '12+', label: 'Years Exp.' },
               { value: '100+', label: 'Projects' },
               { value: '4+', label: 'Countries' },
             ].map((stat) => (

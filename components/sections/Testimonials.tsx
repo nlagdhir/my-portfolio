@@ -105,7 +105,7 @@ export default function Testimonials() {
         >
           <div className="inline-flex flex-wrap items-center justify-center gap-8 px-8 py-5 rounded-2xl bg-white border border-slate-100 shadow-sm">
             <div className="text-center">
-              <div className="text-2xl font-extrabold text-slate-900">7+</div>
+              <div className="text-2xl font-extrabold text-slate-900">12+</div>
               <div className="text-slate-500 text-xs mt-0.5">Years Experience</div>
             </div>
             <div className="w-px h-8 bg-slate-200" />
