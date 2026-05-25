@@ -23,9 +23,13 @@ const TURNSTILE_SITE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY ?? ''
 export default function Contact() {
   const [formState, setFormState] = useState<FormState>('idle')
   const [captchaToken, setCaptchaToken] = useState('')
-  const [captchaReady, setCaptchaReady] = useState(!TURNSTILE_SITE_KEY) // true if no key configured
+  // true only when the widget itself fails to load (bad key / network) — allows graceful bypass
+  const [captchaErrored, setCaptchaErrored] = useState(false)
   const [errorMsg, setErrorMsg] = useState('Something went wrong. Please try again or contact me directly.')
   const turnstileRef = useRef<TurnstileInstance>(null)
+
+  // CAPTCHA is blocking submission when: site key is configured AND widget didn't error AND no token yet
+  const captchaBlocking = !!TURNSTILE_SITE_KEY && !captchaErrored && !captchaToken
   const [form, setForm] = useState({
     name: '',
     email: '',
@@ -44,8 +48,7 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
 
-    // Block only if CAPTCHA is configured AND loaded successfully AND no token yet
-    if (TURNSTILE_SITE_KEY && captchaReady && !captchaToken) {
+    if (captchaBlocking) {
       setErrorMsg('Please complete the CAPTCHA check before submitting.')
       setFormState('error')
       return
@@ -322,13 +325,12 @@ export default function Contact() {
                     <Turnstile
                       ref={turnstileRef}
                       siteKey={TURNSTILE_SITE_KEY}
-                      onSuccess={(token) => { setCaptchaToken(token); setCaptchaReady(true) }}
-                      onExpire={() => { setCaptchaToken(''); setCaptchaReady(true) }}
+                      onSuccess={setCaptchaToken}
+                      onExpire={() => setCaptchaToken('')}
                       onError={() => {
-                        // Widget failed to load (bad key, domain not allowed, network issue)
-                        // Allow form submission anyway — server-side won't block on empty token
+                        // Widget failed to load — allow submission as graceful fallback
                         setCaptchaToken('')
-                        setCaptchaReady(false)
+                        setCaptchaErrored(true)
                       }}
                       options={{ theme: 'dark' }}
                     />
@@ -343,7 +345,7 @@ export default function Contact() {
 
                   <button
                     type="submit"
-                    disabled={formState === 'submitting' || (!!TURNSTILE_SITE_KEY && captchaReady && !captchaToken)}
+                    disabled={formState === 'submitting' || captchaBlocking}
                     className="w-full py-4 px-6 rounded-xl bg-gradient-to-r from-blue-600 to-violet-600 text-white font-bold text-sm shadow-lg hover:shadow-blue-500/30 hover:scale-[1.01] transition-all disabled:opacity-60 disabled:cursor-not-allowed"
                   >
                     {formState === 'submitting' ? 'Sending...' : 'Send Project Brief'}
