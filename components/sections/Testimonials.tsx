@@ -31,6 +31,15 @@ const testimonials = [
     initials: 'MR',
     color: 'from-blue-500 to-blue-700',
   },
+  {
+    quote:
+      'Our staff were spending hours every day replying to "where is my parcel?" messages on WhatsApp. Nilesh automated the whole thing — tracking updates, booking confirmations, delivery alerts. Customers get instant replies now and our team finally has time for actual work.',
+    name: 'Vivek Trivedi',
+    role: 'Director',
+    company: 'Shree Trivedi International · Ahmedabad, India',
+    initials: 'VT',
+    color: 'from-green-500 to-teal-600',
+  },
 ]
 
 export default function Testimonials() {
@@ -58,7 +67,7 @@ export default function Testimonials() {
         </motion.div>
 
         {/* Testimonial Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={testimonial.name}
@@ -70,8 +79,8 @@ export default function Testimonials() {
             >
               {/* Stars */}
               <div className="flex gap-1 mb-5">
-                {Array.from({ length: 5 }).map((_, i) => (
-                  <HiStar key={i} className="text-amber-400" size={16} />
+                {['s1', 's2', 's3', 's4', 's5'].map((id) => (
+                  <HiStar key={id} className="text-amber-400" size={16} />
                 ))}
               </div>
 

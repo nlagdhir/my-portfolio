@@ -3,7 +3,19 @@
 import { motion } from 'framer-motion'
 import { HiArrowRight } from 'react-icons/hi'
 
-const caseStudies = [
+const caseStudies: {
+  category: string
+  title: string
+  client?: string
+  problem: string
+  solution: string
+  outcome: string
+  tech: string[]
+  metric: string
+  metricLabel: string
+  gradient: string
+  industry: string
+}[] = [
   {
     category: 'AI Voice Automation',
     title: 'AI Voice Agent for Courier Tracking',
@@ -20,17 +32,18 @@ const caseStudies = [
   },
   {
     category: 'WhatsApp Automation',
-    title: 'WhatsApp Business Automation Platform',
+    title: 'WhatsApp Automation for International Courier',
+    client: 'Shree Trivedi International',
     problem:
-      'Businesses were manually responding to repetitive customer inquiries, losing leads due to slow response times.',
+      'Support staff were manually handling hundreds of shipment status queries daily on WhatsApp, causing delays and missed customer messages.',
     solution:
-      'Deployed automated workflows for lead capture, customer support, follow-up sequences, and real-time notifications.',
-    outcome: 'Faster response times, higher lead conversion, and reduced manual workload.',
-    tech: ['WhatsApp API', 'Laravel', 'Workflow Automation', 'CRM Integration'],
+      'Built automated WhatsApp flows for shipment tracking updates, delivery notifications, booking confirmations, and instant FAQ responses.',
+    outcome: 'Significant drop in manual support hours with faster customer communication across all shipment touchpoints.',
+    tech: ['WhatsApp API', 'Laravel', 'Workflow Automation', 'Shipment API'],
     metric: '3x',
-    metricLabel: 'Faster lead response',
+    metricLabel: 'Faster response time',
     gradient: 'from-green-500 to-teal-700',
-    industry: 'Sales & Support',
+    industry: 'Logistics',
   },
   {
     category: 'MVP Development',
@@ -111,6 +124,9 @@ export default function CaseStudies() {
                       </span>
                     </div>
                     <h3 className="text-white font-bold text-xl leading-tight">{cs.title}</h3>
+                    {cs.client && (
+                      <p className="text-white/60 text-xs mt-1.5 font-medium">{cs.client}</p>
+                    )}
                   </div>
                   <div className="text-right flex-shrink-0 ml-4">
                     <div className="text-white font-extrabold text-2xl leading-none">{cs.metric}</div>
