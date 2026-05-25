@@ -1,9 +1,10 @@
 'use client'
 
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import { HiMail, HiCalendar, HiCheckCircle, HiExclamationCircle } from 'react-icons/hi'
 import { FaWhatsapp, FaLinkedin } from 'react-icons/fa'
+import { Turnstile, type TurnstileInstance } from '@marsidev/react-turnstile'
 
 const projectTypes = [
   'Business Website',
@@ -17,8 +18,13 @@ const projectTypes = [
 
 type FormState = 'idle' | 'submitting' | 'success' | 'error'
 
+const TURNSTILE_SITE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY ?? ''
+
 export default function Contact() {
   const [formState, setFormState] = useState<FormState>('idle')
+  const [captchaToken, setCaptchaToken] = useState('')
+  const [errorMsg, setErrorMsg] = useState('Something went wrong. Please try again or contact me directly.')
+  const turnstileRef = useRef<TurnstileInstance>(null)
   const [form, setForm] = useState({
     name: '',
     email: '',
@@ -36,22 +42,39 @@ export default function Contact() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+
+    if (TURNSTILE_SITE_KEY && !captchaToken) {
+      setErrorMsg('Please complete the CAPTCHA check before submitting.')
+      setFormState('error')
+      return
+    }
+
     setFormState('submitting')
+    setErrorMsg('')
 
     try {
       const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form),
+        body: JSON.stringify({ ...form, captchaToken }),
       })
+
       if (res.ok) {
         setFormState('success')
         setForm({ name: '', email: '', company: '', projectType: '', budget: '', message: '' })
+        setCaptchaToken('')
       } else {
+        const data = await res.json().catch(() => ({}))
+        setErrorMsg(data?.error ?? 'Something went wrong. Please try again.')
         setFormState('error')
+        turnstileRef.current?.reset()
+        setCaptchaToken('')
       }
     } catch {
+      setErrorMsg('Something went wrong. Please try again or contact me directly.')
       setFormState('error')
+      turnstileRef.current?.reset()
+      setCaptchaToken('')
     }
   }
 
@@ -190,10 +213,11 @@ export default function Contact() {
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-slate-400 text-xs font-medium mb-1.5">
+                      <label htmlFor="name" className="block text-slate-400 text-xs font-medium mb-1.5">
                         Full Name *
                       </label>
                       <input
+                        id="name"
                         type="text"
                         name="name"
                         value={form.name}
@@ -204,10 +228,11 @@ export default function Contact() {
                       />
                     </div>
                     <div>
-                      <label className="block text-slate-400 text-xs font-medium mb-1.5">
+                      <label htmlFor="email" className="block text-slate-400 text-xs font-medium mb-1.5">
                         Email Address *
                       </label>
                       <input
+                        id="email"
                         type="email"
                         name="email"
                         value={form.email}
@@ -221,10 +246,11 @@ export default function Contact() {
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-slate-400 text-xs font-medium mb-1.5">
+                      <label htmlFor="company" className="block text-slate-400 text-xs font-medium mb-1.5">
                         Company / Startup
                       </label>
                       <input
+                        id="company"
                         type="text"
                         name="company"
                         value={form.company}
@@ -234,10 +260,11 @@ export default function Contact() {
                       />
                     </div>
                     <div>
-                      <label className="block text-slate-400 text-xs font-medium mb-1.5">
+                      <label htmlFor="projectType" className="block text-slate-400 text-xs font-medium mb-1.5">
                         Project Type
                       </label>
                       <select
+                        id="projectType"
                         name="projectType"
                         value={form.projectType}
                         onChange={handleChange}
@@ -252,10 +279,11 @@ export default function Contact() {
                   </div>
 
                   <div>
-                    <label className="block text-slate-400 text-xs font-medium mb-1.5">
+                    <label htmlFor="budget" className="block text-slate-400 text-xs font-medium mb-1.5">
                       Approximate Budget
                     </label>
                     <select
+                      id="budget"
                       name="budget"
                       value={form.budget}
                       onChange={handleChange}
@@ -272,10 +300,11 @@ export default function Contact() {
                   </div>
 
                   <div>
-                    <label className="block text-slate-400 text-xs font-medium mb-1.5">
+                    <label htmlFor="message" className="block text-slate-400 text-xs font-medium mb-1.5">
                       Tell Me About Your Project *
                     </label>
                     <textarea
+                      id="message"
                       name="message"
                       value={form.message}
                       onChange={handleChange}
@@ -286,16 +315,28 @@ export default function Contact() {
                     />
                   </div>
 
+                  {/* Cloudflare Turnstile CAPTCHA */}
+                  {TURNSTILE_SITE_KEY && (
+                    <Turnstile
+                      ref={turnstileRef}
+                      siteKey={TURNSTILE_SITE_KEY}
+                      onSuccess={setCaptchaToken}
+                      onExpire={() => setCaptchaToken('')}
+                      onError={() => setCaptchaToken('')}
+                      options={{ theme: 'dark' }}
+                    />
+                  )}
+
                   {formState === 'error' && (
                     <div className="flex items-center gap-2 text-red-400 text-sm">
                       <HiExclamationCircle size={16} />
-                      Something went wrong. Please try again or contact me directly.
+                      {errorMsg}
                     </div>
                   )}
 
                   <button
                     type="submit"
-                    disabled={formState === 'submitting'}
+                    disabled={formState === 'submitting' || (!!TURNSTILE_SITE_KEY && !captchaToken)}
                     className="w-full py-4 px-6 rounded-xl bg-gradient-to-r from-blue-600 to-violet-600 text-white font-bold text-sm shadow-lg hover:shadow-blue-500/30 hover:scale-[1.01] transition-all disabled:opacity-60 disabled:cursor-not-allowed"
                   >
                     {formState === 'submitting' ? 'Sending...' : 'Send Project Brief'}
