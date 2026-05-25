@@ -173,10 +173,18 @@ export default function Contact() {
                 <div className="flex flex-col items-center justify-center py-12 text-center">
                   <HiCheckCircle className="text-green-400 mb-4" size={48} />
                   <h4 className="text-white font-bold text-lg mb-2">Message Sent!</h4>
-                  <p className="text-slate-400 text-sm">
-                    I&apos;ll get back to you within 24 hours. For faster response, feel free to
-                    book a call on Calendly.
+                  <p className="text-slate-400 text-sm mb-6">
+                    I&apos;ll get back to you within 24 hours. For a faster reply, message me
+                    directly on WhatsApp.
                   </p>
+                  <a
+                    href="https://wa.me/919510110198"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-green-500 hover:bg-green-400 text-white font-semibold text-sm transition-colors"
+                  >
+                    💬 Message on WhatsApp
+                  </a>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4">
