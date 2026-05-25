@@ -5,6 +5,7 @@ import { motion } from 'framer-motion'
 import { HiMail, HiCalendar, HiCheckCircle, HiExclamationCircle } from 'react-icons/hi'
 import { FaWhatsapp, FaLinkedin } from 'react-icons/fa'
 import { Turnstile, type TurnstileInstance } from '@marsidev/react-turnstile'
+import { trackFormSubmit, trackWhatsAppClick } from '@/lib/gtag'
 
 const projectTypes = [
   'Business Website',
@@ -68,6 +69,7 @@ export default function Contact() {
         setFormState('success')
         setForm({ name: '', email: '', company: '', projectType: '', budget: '', message: '' })
         setCaptchaToken('')
+        trackFormSubmit()
       } else {
         const data = await res.json().catch(() => ({}))
         setErrorMsg(data?.error ?? 'Something went wrong. Please try again.')
@@ -209,6 +211,7 @@ export default function Contact() {
                     href="https://wa.me/919510110198"
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={() => trackWhatsAppClick('contact_form_success')}
                     className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-green-500 hover:bg-green-400 text-white font-semibold text-sm transition-colors"
                   >
                     💬 Message on WhatsApp

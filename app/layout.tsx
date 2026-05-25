@@ -3,6 +3,7 @@ import './globals.css'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 import FloatingCTA from '@/components/FloatingCTA'
+import Analytics from '@/components/Analytics'
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -88,6 +89,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         />
       </head>
       <body className="min-h-screen bg-white">
+        <Analytics />
         <Header />
         <main id="main-content">{children}</main>
         <Footer />

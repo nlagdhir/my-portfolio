@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next'
 import '../globals.css'
 import Link from 'next/link'
+import Analytics from '@/components/Analytics'
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -24,6 +25,7 @@ export default function LandingLayout({ children }: { children: React.ReactNode 
         />
       </head>
       <body className="min-h-screen bg-white">
+        <Analytics />
         {/* Minimal header */}
         <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

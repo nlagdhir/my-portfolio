@@ -1,8 +1,21 @@
 'use client'
 
+import { useEffect } from 'react'
 import Script from 'next/script'
+import { trackCalendlyBooked } from '@/lib/gtag'
 
 export default function CalendlyEmbed() {
+  useEffect(() => {
+    function handleMessage(e: MessageEvent) {
+      if (e.origin !== 'https://calendly.com') return
+      if (e.data?.event === 'calendly.event_scheduled') {
+        trackCalendlyBooked('inline_embed')
+      }
+    }
+    window.addEventListener('message', handleMessage)
+    return () => window.removeEventListener('message', handleMessage)
+  }, [])
+
   return (
     <>
       <div
