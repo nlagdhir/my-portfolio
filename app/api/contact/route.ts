@@ -7,7 +7,21 @@ const CSV_PATHNAME = 'inquiries/submissions.csv'
 const CSV_HEADERS  = 'Submitted At,Name,Email,Company,Project Type,Budget,Message\n'
 
 function csvCell(value: string | undefined): string {
-  return `"${String(value ?? '').replace(/"/g, '""')}"`
+  return `"${String(value ?? '').replaceAll('"', '""')}"`
+}
+
+function buildSummaryBlock(projectType?: string, budget?: string): string {
+  const projectRow = projectType
+    ? `<p style="margin:4px 0;font-size:13px;color:#475569"><strong>Project type:</strong> ${projectType}</p>`
+    : ''
+  const budgetRow = budget
+    ? `<p style="margin:4px 0;font-size:13px;color:#475569"><strong>Budget range:</strong> ${budget}</p>`
+    : ''
+  return `
+  <div style="background:#fff;border-radius:10px;border:1px solid #e2e8f0;padding:16px;margin:0 0 20px">
+    <p style="margin:0 0 8px;font-size:12px;color:#94a3b8;text-transform:uppercase;letter-spacing:.05em">Your enquiry summary</p>
+    ${projectRow}${budgetRow}
+  </div>`
 }
 
 async function appendToCSV(row: {
@@ -51,8 +65,10 @@ export async function POST(req: NextRequest) {
     }
 
     // ── 1. CAPTCHA verification (Cloudflare Turnstile) ────────────────────────
+    // Only verify if both the secret key is configured AND a token was submitted
+    // (widget may have failed to load — we don't block the form in that case)
     const turnstileSecret = process.env.TURNSTILE_SECRET_KEY
-    if (turnstileSecret) {
+    if (turnstileSecret && captchaToken) {
       const verifyRes = await fetch(
         'https://challenges.cloudflare.com/turnstile/v0/siteverify',
         {
@@ -127,12 +143,7 @@ export async function POST(req: NextRequest) {
             Thank you for reaching out via <strong>nlagdhir.in</strong>.
             I've received your enquiry and will get back to you within <strong>24 hours</strong>.
           </p>
-          ${(projectType || budget) ? `
-          <div style="background:#fff;border-radius:10px;border:1px solid #e2e8f0;padding:16px;margin:0 0 20px">
-            <p style="margin:0 0 8px;font-size:12px;color:#94a3b8;text-transform:uppercase;letter-spacing:.05em">Your enquiry summary</p>
-            ${projectType ? `<p style="margin:4px 0;font-size:13px;color:#475569"><strong>Project type:</strong> ${projectType}</p>` : ''}
-            ${budget      ? `<p style="margin:4px 0;font-size:13px;color:#475569"><strong>Budget range:</strong> ${budget}</p>` : ''}
-          </div>` : ''}
+          ${(projectType || budget) ? buildSummaryBlock(projectType, budget) : ''}
           <p style="color:#475569;margin:0 0 20px;line-height:1.7">
             Need a faster response? Message me directly on WhatsApp or book a free 30-min call.
           </p>
