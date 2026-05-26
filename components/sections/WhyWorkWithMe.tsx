@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import CalendlyLink from '@/components/CalendlyLink'
 import {
   HiLightBulb,
   HiCpuChip,
@@ -106,14 +107,12 @@ export default function WhyWorkWithMe() {
               ))}
             </ul>
 
-            <a
-              href="https://calendly.com/nilesh-nlagdhir"
-              target="_blank"
-              rel="noopener noreferrer"
+            <CalendlyLink
+              source="why_work_with_me"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-violet-600 text-white font-bold text-sm shadow-md hover:shadow-blue-500/30 hover:scale-105 transition-all"
             >
               Let&apos;s Work Together
-            </a>
+            </CalendlyLink>
           </motion.div>
 
           {/* Right: Value props grid */}

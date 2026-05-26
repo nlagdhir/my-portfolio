@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { HiCalendar, HiArrowRight, HiCheckCircle } from 'react-icons/hi'
 import { FaWhatsapp } from 'react-icons/fa'
+import CalendlyLink from '@/components/CalendlyLink'
 
 const trustBadges = [
   { label: '12+ Years Experience' },
@@ -81,15 +82,13 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-14"
           >
-            <a
-              href="https://calendly.com/nilesh-nlagdhir"
-              target="_blank"
-              rel="noopener noreferrer"
+            <CalendlyLink
+              source="hero"
               className="inline-flex items-center gap-2.5 px-7 py-4 rounded-xl bg-gradient-to-r from-blue-600 to-violet-600 text-white font-bold text-base shadow-lg shadow-blue-600/30 hover:shadow-blue-600/50 hover:scale-105 transition-all duration-200"
             >
               <HiCalendar size={18} />
               Book Free Consultation
-            </a>
+            </CalendlyLink>
             <button
               onClick={() => scrollToSection('case-studies')}
               className="inline-flex items-center gap-2.5 px-7 py-4 rounded-xl border-2 border-slate-600 text-white font-semibold text-base hover:border-slate-400 hover:bg-white/5 transition-all duration-200 group"

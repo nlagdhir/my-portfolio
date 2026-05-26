@@ -1,6 +1,9 @@
+'use client'
+
 import Link from 'next/link'
 import { FaLinkedin, FaGithub, FaTwitter, FaWhatsapp } from 'react-icons/fa'
 import { HiMail, HiPhone, HiLocationMarker } from 'react-icons/hi'
+import CalendlyLink from '@/components/CalendlyLink'
 
 const services = [
   'Custom Web Development',
@@ -36,14 +39,12 @@ export default function Footer() {
             </p>
           </div>
           <div className="flex gap-3 flex-shrink-0">
-            <a
-              href="https://calendly.com/nilesh-nlagdhir"
-              target="_blank"
-              rel="noopener noreferrer"
+            <CalendlyLink
+              source="footer"
               className="inline-flex items-center px-6 py-3 rounded-xl bg-white text-blue-700 font-bold text-sm hover:shadow-lg hover:scale-105 transition-all"
             >
               Book Free Call
-            </a>
+            </CalendlyLink>
             <a
               href="https://wa.me/919510110198"
               target="_blank"

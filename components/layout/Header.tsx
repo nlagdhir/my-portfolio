@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
 import { HiMenu, HiX } from 'react-icons/hi'
 import { cn } from '@/lib/cn'
+import CalendlyLink from '@/components/CalendlyLink'
 
 const navLinks = [
   { label: 'Services', href: '#services' },
@@ -88,14 +89,12 @@ export default function Header() {
 
             {/* CTA Button */}
             <div className="hidden md:flex items-center gap-3">
-              <a
-                href="https://calendly.com/nilesh-nlagdhir"
-                target="_blank"
-                rel="noopener noreferrer"
+              <CalendlyLink
+                source="header_desktop"
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-gradient-to-r from-blue-600 to-violet-600 text-white text-sm font-semibold shadow-md hover:shadow-blue-500/30 hover:scale-105 transition-all duration-200"
               >
                 Book Free Consultation
-              </a>
+              </CalendlyLink>
             </div>
 
             {/* Mobile Menu Toggle */}
@@ -161,14 +160,12 @@ export default function Header() {
               </nav>
 
               <div className="mt-auto p-5 border-t border-slate-100">
-                <a
-                  href="https://calendly.com/nilesh-nlagdhir"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <CalendlyLink
+                  source="header_mobile"
                   className="block w-full text-center py-3 px-5 rounded-xl bg-gradient-to-r from-blue-600 to-violet-600 text-white font-semibold shadow-md"
                 >
                   Book Free Consultation
-                </a>
+                </CalendlyLink>
                 <a
                   href="https://wa.me/919510110198"
                   target="_blank"

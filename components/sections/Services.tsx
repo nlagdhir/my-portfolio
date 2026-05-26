@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
+import CalendlyLink from '@/components/CalendlyLink'
 import {
   HiCode,
   HiLightningBolt,
@@ -207,14 +208,12 @@ export default function Services() {
           <p className="text-slate-500 mb-5 text-base">
             Not sure which service fits your needs? Let&apos;s talk it through.
           </p>
-          <a
-            href="https://calendly.com/nilesh-nlagdhir"
-            target="_blank"
-            rel="noopener noreferrer"
+          <CalendlyLink
+            source="services"
             className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-xl bg-gradient-to-r from-blue-600 to-violet-600 text-white font-bold text-sm shadow-md hover:shadow-blue-500/30 hover:scale-105 transition-all"
           >
             Book a Free 30-Min Strategy Call
-          </a>
+          </CalendlyLink>
         </motion.div>
       </div>
     </section>

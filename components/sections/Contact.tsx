@@ -4,6 +4,7 @@ import { useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import { HiMail, HiCalendar, HiCheckCircle, HiExclamationCircle } from 'react-icons/hi'
 import { FaWhatsapp, FaLinkedin } from 'react-icons/fa'
+import CalendlyLink from '@/components/CalendlyLink'
 import { Turnstile, type TurnstileInstance } from '@marsidev/react-turnstile'
 import { trackFormSubmit, trackWhatsAppClick } from '@/lib/gtag'
 
@@ -129,14 +130,12 @@ export default function Contact() {
                 The fastest way to get started. Discuss your project, ask questions, and get a
                 preliminary estimate — no obligation.
               </p>
-              <a
-                href="https://calendly.com/nilesh-nlagdhir"
-                target="_blank"
-                rel="noopener noreferrer"
+              <CalendlyLink
+                source="contact_sidebar"
                 className="block text-center py-3 px-5 rounded-xl bg-white text-blue-700 font-bold text-sm hover:bg-blue-50 transition-colors"
               >
                 Schedule on Calendly
-              </a>
+              </CalendlyLink>
             </div>
 
             {/* WhatsApp */}

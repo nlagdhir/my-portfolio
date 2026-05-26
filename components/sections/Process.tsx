@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import CalendlyLink from '@/components/CalendlyLink'
 import {
   HiSearch,
   HiClipboardList,
@@ -157,14 +158,12 @@ export default function Process() {
           <p className="text-slate-400 mb-6">
             Ready to start your project? The first step is a free 30-minute discovery call.
           </p>
-          <a
-            href="https://calendly.com/nilesh-nlagdhir"
-            target="_blank"
-            rel="noopener noreferrer"
+          <CalendlyLink
+            source="process"
             className="inline-flex items-center gap-2.5 px-8 py-4 rounded-xl bg-gradient-to-r from-blue-600 to-violet-600 text-white font-bold text-sm shadow-lg shadow-blue-600/30 hover:shadow-blue-600/50 hover:scale-105 transition-all"
           >
             Start With a Free Consultation
-          </a>
+          </CalendlyLink>
         </motion.div>
       </div>
     </section>

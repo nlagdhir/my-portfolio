@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { FaWhatsapp } from 'react-icons/fa'
 import { HiCalendar, HiX } from 'react-icons/hi'
+import CalendlyLink from '@/components/CalendlyLink'
 
 export default function FloatingCTA() {
   const [showBookCall, setShowBookCall] = useState(false)
@@ -49,15 +50,13 @@ export default function FloatingCTA() {
             transition={{ type: 'spring', stiffness: 300, damping: 30 }}
             className="fixed bottom-6 left-6 z-50 flex items-center gap-2"
           >
-            <a
-              href="https://calendly.com/nilesh-nlagdhir"
-              target="_blank"
-              rel="noopener noreferrer"
+            <CalendlyLink
+              source="floating_cta"
               className="flex items-center gap-2.5 pl-4 pr-5 py-3 rounded-full bg-gradient-to-r from-blue-600 to-violet-600 text-white font-semibold text-sm shadow-lg shadow-blue-600/30 hover:shadow-blue-600/50 hover:scale-105 transition-all"
             >
               <HiCalendar size={17} />
               Book a Free Call
-            </a>
+            </CalendlyLink>
             <button
               onClick={() => setDismissed(true)}
               className="w-7 h-7 rounded-full bg-slate-700 text-white flex items-center justify-center hover:bg-slate-600 transition-colors"

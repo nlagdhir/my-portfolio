@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { HiChevronDown } from 'react-icons/hi'
+import CalendlyLink from '@/components/CalendlyLink'
 import { cn } from '@/lib/cn'
 
 const faqs = [
@@ -133,14 +134,12 @@ export default function FAQ() {
               Answers to the most common questions I get from potential clients. Don&apos;t see your
               question? Just reach out directly.
             </p>
-            <a
-              href="https://calendly.com/nilesh-nlagdhir"
-              target="_blank"
-              rel="noopener noreferrer"
+            <CalendlyLink
+              source="faq"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border-2 border-slate-200 text-slate-700 font-semibold text-sm hover:border-blue-300 hover:text-blue-600 hover:bg-blue-50 transition-all"
             >
               Ask a Question
-            </a>
+            </CalendlyLink>
           </motion.div>
 
           {/* Right: Accordion */}

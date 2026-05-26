@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next'
 import '../globals.css'
 import Link from 'next/link'
 import Analytics from '@/components/Analytics'
+import CalendlyLink from '@/components/CalendlyLink'
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -36,14 +37,12 @@ export default function LandingLayout({ children }: { children: React.ReactNode 
               >
                 Nilesh Lagdhir
               </Link>
-              <a
-                href="https://calendly.com/nilesh-nlagdhir"
-                target="_blank"
-                rel="noopener noreferrer"
+              <CalendlyLink
+                source="landing_header"
                 className="inline-flex items-center px-4 py-2 rounded-lg bg-blue-600 text-white text-sm font-semibold hover:bg-blue-700 transition-colors"
               >
                 Book a Free Call
-              </a>
+              </CalendlyLink>
             </div>
           </div>
         </header>

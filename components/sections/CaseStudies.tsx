@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { HiArrowRight } from 'react-icons/hi'
+import CalendlyLink from '@/components/CalendlyLink'
 
 const caseStudies: {
   category: string
@@ -194,15 +195,13 @@ export default function CaseStudies() {
           <p className="text-slate-500 mb-5">
             Have a project in mind? Let&apos;s discuss how I can help you achieve similar results.
           </p>
-          <a
-            href="https://calendly.com/nilesh-nlagdhir"
-            target="_blank"
-            rel="noopener noreferrer"
+          <CalendlyLink
+            source="case_studies"
             className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-xl border-2 border-slate-200 text-slate-700 font-semibold text-sm hover:border-blue-400 hover:text-blue-600 hover:bg-blue-50 transition-all group"
           >
             Discuss Your Project
             <HiArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-          </a>
+          </CalendlyLink>
         </motion.div>
       </div>
     </section>
