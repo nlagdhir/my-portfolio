@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { FaWhatsapp } from 'react-icons/fa'
 import { HiCalendar, HiX } from 'react-icons/hi'
 import CalendlyLink from '@/components/CalendlyLink'
+import { trackWhatsAppClick } from '@/lib/gtag'
 
 export default function FloatingCTA() {
   const [showBookCall, setShowBookCall] = useState(false)
@@ -30,6 +31,7 @@ export default function FloatingCTA() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat on WhatsApp"
+        onClick={() => trackWhatsAppClick('floating_wa')}
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ delay: 1.5, type: 'spring', stiffness: 260, damping: 20 }}

@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { FaLinkedin, FaGithub, FaTwitter, FaWhatsapp } from 'react-icons/fa'
 import { HiMail, HiPhone, HiLocationMarker } from 'react-icons/hi'
 import CalendlyLink from '@/components/CalendlyLink'
+import { trackWhatsAppClick } from '@/lib/gtag'
 
 const services = [
   'Custom Web Development',
@@ -49,6 +50,7 @@ export default function Footer() {
               href="https://wa.me/919510110198"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackWhatsAppClick('footer_banner')}
               className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border-2 border-white/40 text-white font-semibold text-sm hover:bg-white/10 transition-colors"
             >
               <FaWhatsapp size={16} />
@@ -106,6 +108,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="WhatsApp"
+                onClick={() => trackWhatsAppClick('footer_social')}
                 className="w-9 h-9 rounded-lg bg-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:bg-green-600 transition-all"
               >
                 <FaWhatsapp size={16} />
@@ -165,6 +168,7 @@ export default function Footer() {
                   href="https://wa.me/919510110198"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackWhatsAppClick('footer_contact')}
                   className="flex items-start gap-3 text-slate-400 text-sm hover:text-green-400 transition-colors"
                 >
                   <FaWhatsapp size={16} className="mt-0.5 flex-shrink-0" />

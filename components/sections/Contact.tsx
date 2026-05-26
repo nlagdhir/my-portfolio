@@ -149,6 +149,7 @@ export default function Contact() {
                 href="https://wa.me/919510110198?text=Hi%20Nilesh%2C%20I%27d%20like%20to%20discuss%20a%20project."
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackWhatsAppClick('contact_sidebar')}
                 className="flex items-center gap-2 py-2.5 px-4 rounded-xl bg-green-600/20 border border-green-600/30 text-green-400 font-semibold text-sm hover:bg-green-600/30 transition-colors w-fit"
               >
                 <FaWhatsapp size={16} />

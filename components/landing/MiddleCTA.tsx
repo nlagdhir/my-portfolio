@@ -1,6 +1,7 @@
 'use client'
 
 import CalendlyLink from '@/components/CalendlyLink'
+import { trackWhatsAppClick } from '@/lib/gtag'
 
 const WHATSAPP = 'https://wa.me/919510110198'
 
@@ -27,6 +28,7 @@ export default function MiddleCTA({ headline, subtext, primaryText }: MiddleCTAP
             href={WHATSAPP}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackWhatsAppClick('middle_cta')}
             className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-white/10 border border-white/30 text-white font-semibold text-base hover:bg-white/20 transition-colors"
           >
             💬 Prefer chatting? Message on WhatsApp

@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { HiMenu, HiX } from 'react-icons/hi'
 import { cn } from '@/lib/cn'
 import CalendlyLink from '@/components/CalendlyLink'
+import { trackWhatsAppClick } from '@/lib/gtag'
 
 const navLinks = [
   { label: 'Services', href: '#services' },
@@ -170,6 +171,7 @@ export default function Header() {
                   href="https://wa.me/919510110198"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackWhatsAppClick('header_mobile')}
                   className="block w-full text-center mt-3 py-3 px-5 rounded-xl border-2 border-green-500 text-green-600 font-semibold hover:bg-green-50 transition-colors"
                 >
                   WhatsApp Me
