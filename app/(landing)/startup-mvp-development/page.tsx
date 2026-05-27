@@ -97,18 +97,18 @@ export default function StartupMVPDevelopmentPage() {
       <section className="bg-slate-950 pt-28 pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-semibold bg-blue-600/20 text-blue-400 border border-blue-600/30 mb-6">
-            MVP Development Specialist
+            For Non-Technical Founders
           </span>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6 max-w-4xl mx-auto">
             Launch Your MVP in{' '}
             <span className="text-gradient">6–8 Weeks</span>
-            {' '}— Without Burning Your Budget
+            {' '}— Without Hiring a Full Team
           </h1>
 
           <p className="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto mb-10">
-            My team and I help startup founders go from idea to live product fast — with clean
-            architecture, scalable code, and a process that keeps you informed every step of the way.
+            My team and I help startup founders go from idea to live product fast. Clean
+            architecture, weekly demos, and direct communication — no project managers, no surprises.
           </p>
 
           {/* Top CTA */}

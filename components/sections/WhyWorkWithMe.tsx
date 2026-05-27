@@ -84,17 +84,19 @@ export default function WhyWorkWithMe() {
             className="lg:col-span-4"
           >
             <span className="inline-block px-3 py-1 rounded-full bg-indigo-50 text-indigo-600 text-xs font-semibold uppercase tracking-widest mb-4">
-              Why Work With Me
+              Why Work With Me Instead of an Agency?
             </span>
             <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 leading-tight mb-5">
-              A Technology Partner,
+              Direct Access.
               <br />
-              Not Just a Developer
+              Faster Iterations.
+              <br />
+              Lower Overhead.
             </h2>
             <p className="text-slate-500 text-base leading-relaxed mb-8">
-              I work with founders and business owners alongside a vetted development team. You get
-              direct access to me throughout — no account managers, no hand-offs, clear communication
-              from first call to launch.
+              Agencies add layers — account managers, handoffs, and markups. With me, you talk
+              directly to the person building your product. My team handles execution; I own the
+              communication and outcomes.
             </p>
 
             {/* Highlights */}
